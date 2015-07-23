@@ -76,6 +76,6 @@ alias ducks='du -cksh * | sort -rn|head -11'
 
 
 
-# SHOW MOST USED COMMANDS
+# SHOW MOST USED COMMANDS -----------------------------------------------
 #   From http://lifehacker.com/software/how-to/turbocharge-your-terminal-274317.php
 alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
