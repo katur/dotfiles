@@ -42,8 +42,8 @@ export PS1="\[${COLOR_GREEN}\]\u@\h:\w\$(get_git_branch) > \[${COLOR_NULL}\]"
 
 
 # AUTO COMPLETE -------------------------------------------------------------
-#    Use `bind` instead of using a separate ~/.inputrc file. See:
-#    http://www.gnu.org/software/bash/manual/html_node/Readline-Init-File.html
+#   Use `bind` instead of using a separate ~/.inputrc file. See:
+#   http://www.gnu.org/software/bash/manual/html_node/Readline-Init-File.html
 bind 'set completion-ignore-case on'
 
 # Show ambiguities without ringing bell
@@ -73,3 +73,9 @@ alias f='find . -iname'
 
 # Disk usage
 alias ducks='du -cksh * | sort -rn|head -11'
+
+
+
+# SHOW MOST USED COMMANDS
+#   From http://lifehacker.com/software/how-to/turbocharge-your-terminal-274317.php
+alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -n | tail -n 20 | sort -nr"
