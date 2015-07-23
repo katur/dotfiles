@@ -44,7 +44,7 @@ export PS1="\[${COLOR_GREEN}\]\u@\h:\w\$(get_git_branch) > \[${COLOR_NULL}\]"
 # Auto Complete -------------------------------------------------------------
 #    Use `bind` instead of using a separate ~/.inputrc file. See:
 #    http://www.gnu.org/software/bash/manual/html_node/Readline-Init-File.html
-bind "set completion-ignore-case on"
+bind 'set completion-ignore-case on'
 
 # Show ambiguities without ringing bell
-bind "set show-all-if-ambiguous on"
+bind 'set show-all-if-ambiguous on'
