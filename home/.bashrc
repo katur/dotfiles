@@ -48,3 +48,28 @@ bind 'set completion-ignore-case on'
 
 # Show ambiguities without ringing bell
 bind 'set show-all-if-ambiguous on'
+
+
+
+# SIMPLE ALIASES -------------------------------------------------------
+# Moving up directories
+alias ..='cd ..'
+alias ...='cd .. ; cd ..'
+alias ....='cd .. ; cd .. ; cd ..'
+
+# Prompt before overwrite
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
+
+# Fancy listing
+alias ll='ls -hl'
+alias la='ls -a'
+alias lla='ls -lah'
+
+# Case insensitive searching
+alias g='grep -i'
+alias f='find . -iname'
+
+# Disk usage
+alias ducks='du -cksh * | sort -rn|head -11'
