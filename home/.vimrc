@@ -13,7 +13,7 @@ endif
 
 
 """""""""""""""""
-" Editing Style "
+" Editing style "
 """""""""""""""""
 " Figure out the type of files
 filetype plugin on
@@ -37,3 +37,16 @@ set ruler
 
 " Show line numbers
 set number
+
+
+"""""""""""""""""""""""""""""""
+" Searching text within files "
+"""""""""""""""""""""""""""""""
+" Highlight search results
+set hlsearch
+
+" Ignore case while searching
+set ignorecase
+
+" Be smart about case while searching
+set smartcase
