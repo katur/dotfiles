@@ -1,7 +1,7 @@
 if !exists("autocommands_loaded")
   let autocommands_loaded = 1
 
-  " Auto-reload Vim configuration
+  " Auto-reload Vim configuration on save
   autocmd! BufWritePost .vimrc source ~/.vimrc
 
   " Enable autosave
@@ -25,6 +25,9 @@ syntax on
 " Indent of new line matches previous
 set autoindent
 
+" Cause left/right movements at start/end of line to jump to previous/next line
+set whichwrap+=<,>,h,l,[,]
+
 " Use colors that look nice on dark background
 set background=dark
 
@@ -39,9 +42,29 @@ set ruler
 set number
 
 
-"""""""""""""""""""""""""""""""
-" Searching text within files "
-"""""""""""""""""""""""""""""""
+""""""""
+" Tabs "
+""""""""
+" Set tab size
+set tabstop=2
+
+" Help backspace/delete interpret spaces as tabs
+set softtabstop=2
+
+" Set block indent/unindent size
+set shiftwidth=2
+
+" Convert tabs to spaces
+set expandtab
+
+" Make backspace behave like most other apps
+set backspace=2
+set backspace=eol,start,indent
+
+
+""""""""""""""""""
+" Searching text "
+""""""""""""""""""
 " Highlight search results
 set hlsearch
 
