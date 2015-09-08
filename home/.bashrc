@@ -80,3 +80,9 @@ alias ducks='du -cksh * | sort -rn|head -11'
 #   Modified from:
 #   http://lifehacker.com/274317/turbocharge-your-terminal
 alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -nr | head -n 20"
+
+
+
+# PYTHON VIRTUALENVWRAPPER ----------------------------------------------------
+export WORKON_HOME=$HOME/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
