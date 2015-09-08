@@ -1,4 +1,4 @@
-# COLORS ----------------------------------------------------------------
+# COLORS ----------------------------------------------------------------------
 # Define colors to use later
 export COLOR_NULL='\033[0m' # No Color
 export COLOR_WHITE='\033[1;37m'
@@ -32,7 +32,7 @@ export LS_COLORS='di=36;40:ln=35;40:so=32;40:pi=33;40:ex=31;40:bd=34;46:cd=34;43
 
 
 
-# PROMPT ------------------------------------------------------------------
+# PROMPT ----------------------------------------------------------------------
 # Get git branch if in a git directory, to add to prompt
 function get_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ \[\1\]/'
@@ -41,7 +41,7 @@ export PS1="\[${COLOR_GREEN}\]\u@\h:\w\$(get_git_branch) > \[${COLOR_NULL}\]"
 
 
 
-# AUTO COMPLETE -------------------------------------------------------------
+# AUTO COMPLETE ---------------------------------------------------------------
 #   Use `bind` instead of using a separate ~/.inputrc file. See:
 #   http://www.gnu.org/software/bash/manual/html_node/Readline-Init-File.html
 bind 'set completion-ignore-case on'
@@ -51,7 +51,7 @@ bind 'set show-all-if-ambiguous on'
 
 
 
-# SIMPLE ALIASES -------------------------------------------------------
+# SIMPLE ALIASES --------------------------------------------------------------
 # Moving up directories
 alias ..='cd ..'
 alias ...='cd .. ; cd ..'
@@ -76,7 +76,7 @@ alias ducks='du -cksh * | sort -rn|head -11'
 
 
 
-# SHOW MOST USED COMMANDS -----------------------------------------------
+# SHOW MOST USED COMMANDS -----------------------------------------------------
 #   Modified from:
 #   http://lifehacker.com/274317/turbocharge-your-terminal
 alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -nr | head -n 20"
