@@ -72,7 +72,7 @@ alias g='grep -i'
 alias f='find . -iname'
 
 # Disk usage
-alias ducks='du -cks * | sort -rn|head -11'
+alias ducks='du -cks * | sort -rn | head -10'
 
 
 
