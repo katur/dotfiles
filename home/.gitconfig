@@ -1,0 +1,8 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Katherine Erickson
+	email = katherine.erickson@gmail.com
+[push]
+	default = simple
+[core]
+	editor = vim
