@@ -163,22 +163,29 @@ See https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Homebrew
 brew install python
 pip install --upgrade pip setuptools
 pip install virtualenv
+pip install virtualenvwrapper
 ```
 
-(
-  Originally, I installed and upgraded python3 as well:
+Confirm virtualenvwrapper config is in .bashrc:
 
-      brew install python3
-      pip3 install --upgrade pip setuptools
+```
+export WORKON_HOME=$HOME/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
+```
 
-  However, the upgrade command overwrites the default pip and easy_install
-  such that they use python3 instead of python (2), despite the fact that
-  these files exist in python2 directories. This is a known issue:
-  https://github.com/Homebrew/homebrew/issues/25752
+*NOTE:* Originally, I installed and upgraded python3 as well:
 
-  So, since I do not need Python 3 right now anyway, I uninstalled the brewed
-  pythons and packages, and started over, brewing only python (2).
-)
+```
+brew install python3
+pip3 install --upgrade pip setuptools
+```
+
+However, the upgrade command overwrites the default pip and easy_install
+such that they use python3 instead of python (2), despite the fact that
+these files exist in python2 directories. This is a known issue:
+https://github.com/Homebrew/homebrew/issues/25752
+So, since I do not need Python 3 right now anyway, I uninstalled the brewed
+pythons and packages, and started over, brewing only python (2).
 
 
 MySQL
