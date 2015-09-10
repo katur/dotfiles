@@ -104,7 +104,7 @@ homesick clone katur/dotfiles
 ```
 
 Edit ~/.homesick/repos/dotfiles/.git/config to use the ssh instead of http
-URL for connecting (can find this URL on Github)
+URL for connecting (can find this URL on Github).
 
 Create directory to hold the dotfiles that will be symlinked in ~:
 
@@ -113,9 +113,7 @@ mkdir ~/.homesick/repos/dotfiles/home
 ```
 
 Add .bash_profile and .bashrc files to ~/.homesick/repos/dotfiles/home. Commit
-and push changes.
-
-Create the symlinks in ~:
+and push changes, then create the symlinks:
 
 ```
 homesick symlink dotfiles
@@ -123,15 +121,47 @@ homesick symlink dotfiles
 
 Confirm that the bash settings now work (if not, try restarting Terminal).
 
-Move the global git config file and vim config directories, too:
+Move the global git config file to the repo, too:
 
 ```
 mv ~/.gitconfig ~/.homesick/repos/dotfiles/home/
+homesick symlink dotfiles
+```
+
+### If already have a homesick repo
+Follow same steps to clone the repo and to use ssh instead of http.
+
+If the repo contains a git config file redundant with or better
+than that at ~/.gitconfig, will *probably* have to do something like:
+
+```
+rm ~/.gitconfig
+rm ~/.vim
+```
+
+(The same goes for any other dotfiles that already exist on the computer)
+
+Now create the symlinks:
+
+```
+homesick symlink dotfiles
+```
+
+
+Vim
+---
+If adding vim config to dotfiles repo for the first time:
+
+```
 mv ~/.vim ~/.homesick/repos/dotfiles/home/
 homesick symlink dotfiles
 ```
 
-To .gitignore in the dotfiles repo, add `*.netrwhist` (some vim log file).
+To .gitignore in the dotfiles repo, add:
+```
+*.netrwhist
+*.swp
+```
 
 Install pathogen as a git submodule
 (see http://www.tedreed.info/setup/2012/03/30/pathogen-and-plugins/):
@@ -155,24 +185,6 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 ```
 
-### If already have a homesick repo
-Follow same steps to clone the repo and to use ssh instead of http.
-
-If the repo contains a git config file redundant with or better
-than that at ~/.gitconfig, will *probably* have to do something like:
-
-```
-rm ~/.gitconfig
-rm ~/.vim
-```
-
-(The same goes for any other dotfiles that already exist on the computer)
-
-Now create the symlinks:
-
-```
-homesick symlink dotfiles
-```
 
 
 Homebrew
