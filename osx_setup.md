@@ -67,7 +67,8 @@ instructions on prompt that appears during git init attempt)
 
 SSH
 ---
-Create SSH keys (no passphrase for now; to add later, [see this](http://www.cyberciti.biz/faq/howto-ssh-changing-passphrase/)):
+Create SSH keys (no passphrase for now; to add later,
+[see this](http://www.cyberciti.biz/faq/howto-ssh-changing-passphrase/)):
 
 ```
 ssh-keygen -t rsa -b 4096 -C "my_email@lemonparty.org"
@@ -168,7 +169,9 @@ homesick symlink dotfiles
 ```
 
 Install pathogen as a git submodule
-(see [this tutorial](http://www.tedreed.info/setup/2012/03/30/pathogen-and-plugins/) and
+(see
+[this tutorial](http://www.tedreed.info/setup/2012/03/30/pathogen-and-plugins/)
+and
 [this cheatsheet about git submodules in general](http://blog.jacius.info/git-submodule-cheat-sheet/)):
 
 ```
@@ -176,7 +179,8 @@ cd ~/.homesick/repos/dotfiles
 git submodule add https://github.com/tpope/vim-pathogen.git home/.vim/bundle/vim-pathogen
 ```
 
-Per the [pathogen FAQ](https://github.com/tpope/vim-pathogen/blob/master/README.markdown#faq),
+Per the
+[pathogen FAQ](https://github.com/tpope/vim-pathogen/blob/master/README.markdown#faq),
 do the following to keep `tags` files out of repo:
 
 ```
