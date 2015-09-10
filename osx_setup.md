@@ -45,7 +45,7 @@ Download and Install:
   - Log into Dropbox account
 - Skype
   - Log into Skype account
-- [Cisco AnyConnect](https://nyu.service-now.com/servicelink/kb_search.do?id-KB0011175), 
+- [Cisco AnyConnect](https://nyu.service-now.com/servicelink/kb_search.do?id-KB0011175),
   for VPN access to NYU network
 - TextWrangler
 - SequelPro
@@ -59,7 +59,7 @@ System Preferences > Users & Groups > Login Items
 Terminal / OS X Command Line Tools
 ----------------------------------
 Edit Terminal preferences for black background, 13pt font, rows and
-cols to fill screen
+cols to fill screen, no Audible bell, and unqualified Visual bell.
 
 Download and install OS X Command Line Tools (to get here, follow
 instructions on prompt that appears during git init attempt)
@@ -101,7 +101,7 @@ Clone the repo:
 homesick clone katur/dotfiles
 ```
 
-Edit `~/.homesick/repos/dotfiles/.git/config` to use the SSH URL instead of 
+Edit `~/.homesick/repos/dotfiles/.git/config` to use the SSH URL instead of
 the HTTP URL for connecting (can find this URL in the repo on GitHub).
 
 Create directory to hold the files that will be symlinked into `~`:
@@ -110,8 +110,8 @@ Create directory to hold the files that will be symlinked into `~`:
 mkdir ~/.homesick/repos/dotfiles/home
 ```
 
-Add/move `.bash_profile` and `.bashrc` files (or whatever shell configuration 
-files you want) to `~/.homesick/repos/dotfiles/home`. Commit and push 
+Add/move `.bash_profile` and `.bashrc` files (or whatever shell configuration
+files you want) to `~/.homesick/repos/dotfiles/home`. Commit and push
 changes. Then, to create the symlinks into `~`:
 
 ```
@@ -137,7 +137,7 @@ than that at `~/.gitconfig`, will *probably* have to do something like:
 rm ~/.gitconfig
 ```
 
-(The same goes for any other dotfiles in the repo that already exist 
+(The same goes for any other dotfiles in the repo that already exist
 on the computer)
 
 Now create the symlinks:
@@ -199,7 +199,7 @@ git submodule add https://github.com/kien/ctrlp.vim.git home/.vim/bundle/ctrlp
 ```
 
 #### If already have a homesick repo
-Not much should be needed, but make sure to remove any already-present 
+Not much should be needed, but make sure to remove any already-present
 `~/.vim` or `~/.vimrc` prior to making the symlinks.
 
 
@@ -214,7 +214,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 Python
 ------
-[Here](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Homebrew-and-Python.md) 
+[Here](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Homebrew-and-Python.md)
 is the Homebrew documentation about brewing Python.
 
 ```
@@ -240,7 +240,7 @@ pip3 install --upgrade pip setuptools
 
 However, the upgrade command overwrites the default pip and easy_install
 such that they use python3 instead of python2, despite the fact that
-these files exist in python2 directories. 
+these files exist in python2 directories.
 [This is a known issue.](https://github.com/Homebrew/homebrew/issues/25752)
 So, since I do not need Python 3 right now anyway, I uninstalled the brewed
 Pythons and packages, and started over, brewing only python2.
