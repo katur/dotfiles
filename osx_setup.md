@@ -151,6 +151,14 @@ homesick symlink dotfiles
 Vim
 ---
 #### If setting up homesick for the first time
+To prevent committing temporary vim files and logs, make sure these
+are present in `~/.homesick/repos/dotfiles/.gitignore`:
+
+```
+*.netrwhist
+*.swp
+```
+
 Add/move `.vimrc` file to `~/.homesick/repos/dotfiles/home`.
 
 Move `~/.vim` to the dotfiles repo:
@@ -158,14 +166,6 @@ Move `~/.vim` to the dotfiles repo:
 ```
 mv ~/.vim ~/.homesick/repos/dotfiles/home/
 homesick symlink dotfiles
-```
-
-To prevent committing temporary vim files and logs, make sure these
-are present in `~/.homesick/repos/dotfiles/.gitignore`:
-
-```
-*.netrwhist
-*.swp
 ```
 
 Install pathogen as a git submodule
