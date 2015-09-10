@@ -123,26 +123,53 @@ homesick symlink dotfiles
 
 Confirm that the bash settings now work (if not, try restarting Terminal).
 
-Move the global git config file to the repo, too:
+Move the global git config file and vim config directories, too:
 
 ```
 mv ~/.gitconfig ~/.homesick/repos/dotfiles/home/
+mv ~/.vim ~/.homesick/repos/dotfiles/home/
 homesick symlink dotfiles
+```
+
+To .gitignore in the dotfiles repo, add `*.netrwhist` (some vim log file).
+
+Install pathogen as a git submodule
+(see http://www.tedreed.info/setup/2012/03/30/pathogen-and-plugins/):
+
+```
+cd ~/.homesick/repos/dotfiles
+git submodule add https://github.com/tpope/vim-pathogen.git home/.vim/bundle/vim-pathogen
+```
+
+Per the Pathogen FAQ, do this to keep tags files out of repo:
+
+```
+git config --global core.excludesfile '~/.cvsignore'
+echo tags >> ~/.cvsignore
+```
+
+To start Pathogen, add these to .vimrc:
+
+```
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
 ```
 
 ### If already have a homesick repo
 Follow same steps to clone the repo and to use ssh instead of http.
 
 If the repo contains a git config file redundant with or better
-than that at ~/.gitconfig, will probably have to do something like:
+than that at ~/.gitconfig, will *probably* have to do something like:
 
 ```
 rm ~/.gitconfig
+rm ~/.vim
 ```
 
 (The same goes for any other dotfiles that already exist on the computer)
 
 Now create the symlinks:
+
 ```
 homesick symlink dotfiles
 ```

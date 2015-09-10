@@ -1,3 +1,13 @@
+""""""""""""
+" Pathogen "
+""""""""""""
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
+
+
+""""""""""""""""
+" Autocommands "
+""""""""""""""""
 if !exists("autocommands_loaded")
   let autocommands_loaded = 1
 
