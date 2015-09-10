@@ -50,7 +50,7 @@ set novisualbell
 " Show current row/column at bottom right of screen
 set ruler
 
-" Show line numbers
+" Show line numbers on left of screen
 set number
 
 
