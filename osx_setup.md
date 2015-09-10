@@ -1,7 +1,7 @@
 OS X Setup
 ==========
 
-This is what I did to set up my computer.
+This is what I did to set up my Mac.
 
 During OS X Installation
 ------------------------
@@ -16,9 +16,9 @@ System Preferences changes:
 
 - Set the Dock to automatically disappear / reappear
 
-Finder Preferences changes:
+Finder > Preferences changes:
 
-- Change what shows up in "Favorites" sidebar to include home directory,
+- Change what shows up in Favorites sidebar to include home directory,
   and change default to home directory
 - Show all filename extensions
 
@@ -32,8 +32,8 @@ Download and Install:
   - Log in to Chrome to sync Chrome preferences and extensions
   - Right click on uBlock and uSelect icons to "hide button"
   - In Advanced Settings, change download location to Desktop
-  - Ensure that LastPass preferences cause logout after closing browser
-    and idle time.
+  - Ensure that LastPass preferences force logout after closing browser
+    and idle time
 - BetterTouchTool*
   - Enable window snapping in preferences
 - [f.lux](justgetflux.com)*
@@ -101,10 +101,10 @@ Clone the repo:
 homesick clone katur/dotfiles
 ```
 
-Edit `~/.homesick/repos/dotfiles/.git/config` to use the ssh URL instead of http
-URL for connecting (can find this URL in the repo on GitHub).
+Edit `~/.homesick/repos/dotfiles/.git/config` to use the SSH URL instead of 
+the HTTP URL for connecting (can find this URL in the repo on GitHub).
 
-Create directory to hold the dotfiles that will be symlinked into `~`:
+Create directory to hold the files that will be symlinked into `~`:
 
 ```
 mkdir ~/.homesick/repos/dotfiles/home
@@ -128,7 +128,7 @@ homesick symlink dotfiles
 ```
 
 #### If already have a homesick repo
-Follow same steps to clone the repo and to use ssh instead of http.
+Follow same steps to clone the repo and to use SSH instead of HTTP.
 
 If the repo contains a git config file redundant with or better
 than that at `~/.gitconfig`, will *probably* have to do something like:
@@ -160,7 +160,7 @@ are present in `~/.homesick/repos/dotfiles/.gitignore`:
 
 Add/move `.vimrc` file to `~/.homesick/repos/dotfiles/home`.
 
-Move `~/.vim` to the dotfiles repo:
+Move `~/.vim` to the repo:
 
 ```
 mv ~/.vim ~/.homesick/repos/dotfiles/home/
@@ -177,7 +177,7 @@ git submodule add https://github.com/tpope/vim-pathogen.git home/.vim/bundle/vim
 ```
 
 Per the [pathogen FAQ](https://github.com/tpope/vim-pathogen/blob/master/README.markdown#faq),
-do the following to keep tags files out of repo:
+do the following to keep `tags` files out of repo:
 
 ```
 git config --global core.excludesfile '~/.cvsignore'
@@ -205,7 +205,7 @@ Not much should be needed, but make sure to remove any already-present
 
 Homebrew
 --------
-Install homebrew for OS X package management:
+Install Homebrew for OS X package management:
 
 ```
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -215,7 +215,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 Python
 ------
 [Here](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Homebrew-and-Python.md) 
-is a description about brewing Python.
+is the Homebrew documentation about brewing Python.
 
 ```
 brew install python
@@ -224,7 +224,7 @@ pip install virtualenv
 pip install virtualenvwrapper
 ```
 
-Confirm necessary virtualenvwrapper configuration is in `~/.bashrc`:
+Confirm necessary virtualenvwrapper config is in `~/.bashrc`:
 
 ```
 export WORKON_HOME=$HOME/.virtualenvs
@@ -240,10 +240,10 @@ pip3 install --upgrade pip setuptools
 
 However, the upgrade command overwrites the default pip and easy_install
 such that they use python3 instead of python2, despite the fact that
-these files exist in python2 directories. This is a known issue:
-https://github.com/Homebrew/homebrew/issues/25752
+these files exist in python2 directories. 
+[This is a known issue.](https://github.com/Homebrew/homebrew/issues/25752)
 So, since I do not need Python 3 right now anyway, I uninstalled the brewed
-pythons and packages, and started over, brewing only python2.
+Pythons and packages, and started over, brewing only python2.
 
 
 MySQL
