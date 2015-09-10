@@ -6,9 +6,8 @@ This is what I did to set up my computer.
 During OS X Installation
 ------------------------
 - did not import any TimeMachine backup
-- did log into our internet
 - did log into iCloud
-- did not do iKeychain (will keep using Lastpass for now)
+- did not set up iKeychain (will keep using Lastpass for now)
 - did encrypt the disk, allowing password recovery through iCloud password
 
 Delete most everything from Dock, adding Terminal only.
