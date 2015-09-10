@@ -94,7 +94,7 @@ Dot Files
 sudo gem install homesick
 ```
 
-### If first time using homesick
+#### If first time using homesick
 Create new repo in Github called `dotfiles`, with just a README.
 
 Clone the repo:
@@ -128,7 +128,7 @@ mv ~/.gitconfig ~/.homesick/repos/dotfiles/home/
 homesick symlink dotfiles
 ```
 
-### If already have a homesick repo
+#### If already have a homesick repo
 Follow same steps to clone the repo and to use ssh instead of http.
 
 If the repo contains a git config file redundant with or better
