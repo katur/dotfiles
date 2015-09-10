@@ -185,6 +185,12 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 ```
 
+Install ctrlp as a git submodule:
+
+```
+cd ~/.homesick/repos/dotfiles
+git submodule add https://github.com/kien/ctrlp.vim.git home/.vim/bundle/ctrlp
+```
 
 
 Homebrew
