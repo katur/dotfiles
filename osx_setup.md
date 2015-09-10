@@ -1,7 +1,10 @@
-OS X
-====
-During OS X Installation:
+OS X Setup
+==========
 
+This is what I did to set up my computer.
+
+During OS X Installation
+------------------------
 - did not import any TimeMachine backup
 - did log into our internet
 - did log into iCloud
@@ -22,7 +25,7 @@ Finder Preferences changes:
 
 
 Apps
-====
+----
 Download and Install:
 
 - Chrome
@@ -45,7 +48,7 @@ Download and Install:
 - Skype
   - Log into Skype account
 - Cisco AnyConnect, for VPN access to NYU network
-  - https://nyu.service-now.com/servicelink/kb_search.do?id=KB0011175
+  - https://nyu.service-now.com/servicelink/kb_search.do?id-KB0011175
 - TextWrangler
 - SequelPro
   - save connection info for Favorites
@@ -56,7 +59,7 @@ Download and Install:
 
 
 Terminal / OS X Command Line Tools
-==================================
+----------------------------------
 Edit Terminal preferences for black background, 13pt font, rows and
 cols to fill screen
 
@@ -65,7 +68,7 @@ instructions on prompt that appears during git init attempt)
 
 
 SSH
-===
+---
 Create ssh keys (no passphrase for now;
 to add later: http://www.cyberciti.biz/faq/howto-ssh-changing-passphrase/):
 
@@ -74,7 +77,7 @@ ssh-keygen -t rsa -b 4096 -C "my_email@lemonparty.org"
 ```
 
 Git
-===
+---
 Set bare bones global git configuration:
 
 ```
@@ -87,13 +90,12 @@ Add SSH public key to SSH Keys in my Github personal settings.
 
 
 Dot Files
-=========
+---------
 ```
 sudo gem install homesick
 ```
 
-If first time using homesick
-----------------------------
+### If first time using homesick
 Create new repo in Github called `dotfiles`, with just a README.
 
 Clone the repo:
@@ -129,8 +131,7 @@ mv ~/.gitconfig ~/.homesick/repos/dotfiles/home/
 homesick symlink dotfiles
 ```
 
-If already have a homesick repo
--------------------------------
+### If already have a homesick repo
 Follow same steps to clone the repo and to use ssh instead of http.
 
 If the repo contains a git config file redundant with or better
@@ -149,14 +150,14 @@ homesick symlink dotfiles
 
 
 Homebrew
-========
+--------
 ```
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 
 Python
-======
+------
 See https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Homebrew-and-Python.md
 
 ```
@@ -182,7 +183,7 @@ pip install virtualenv
 
 
 MySQL
-=====
+-----
 ```
 brew install mysql
 ```
