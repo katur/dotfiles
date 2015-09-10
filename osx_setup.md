@@ -53,8 +53,8 @@ Download and Install:
   - save connection info for Favorites
 - Various printer softwares (first time I hook up to printer)
 
-* These apps should start on system login, which can be set at
-  System Preferences > Users & Groups > Login Items
+*These apps should start on system login, which can be set at
+System Preferences > Users & Groups > Login Items
 
 
 Terminal / OS X Command Line Tools
