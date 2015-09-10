@@ -57,6 +57,12 @@ set number
 set wildmenu
 set wildmode=list:longest,full
 
+" Enable code folding
+set foldmethod=indent
+
+" Set foldlevel very high so that all folds are open by default
+set foldlevel=99
+
 
 """"""""
 " Tabs "
