@@ -53,6 +53,10 @@ set ruler
 " Show line numbers on left of screen
 set number
 
+" Enable command line completion
+set wildmenu
+set wildmode=list:longest,full
+
 
 """"""""
 " Tabs "
