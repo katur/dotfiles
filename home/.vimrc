@@ -1,3 +1,5 @@
+" katherine's vim settings
+
 """"""""""""
 " Pathogen "
 """"""""""""
