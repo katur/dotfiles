@@ -83,3 +83,19 @@ set ignorecase
 
 " Be smart about case while searching
 set smartcase
+
+
+"""""""""""""""""""
+" File navigation "
+"""""""""""""""""""
+" Ignore compiled files
+set wildignore+=*.o,*.class,*.rbc,*.pyc,*.swp,*.un~,*.obj
+
+" Ignore version control directories
+set wildignore+=.svn,.git
+
+" Ignore temp/cached files
+set wildignore+=vendor/gems/*,*/tmp/cache/*,CACHE/*,*/CACHE/*
+
+" Ignore backups
+set wildignore+=backups
