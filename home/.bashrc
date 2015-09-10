@@ -82,7 +82,7 @@ alias ducks='du -cks * | sort -rn | head -10'
 # SHOW MOST USED COMMANDS -----------------------------------------------------
 #   Modified from:
 #   http://lifehacker.com/274317/turbocharge-your-terminal
-alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -nr | head -n 20"
+alias profileme="history | awk '{print \$2}' | sort | uniq -c | sort -nr | head -20"
 
 
 
