@@ -36,10 +36,9 @@ Download and Install:
     and idle time.
 - BetterTouchTool*
   - Enable window snapping in preferences
-- f.lux*
-  - justgetflux.com
+- [f.lux](justgetflux.com)*
 - AntiRSI*
-  - Free version 2.1 available at: antirsi.onnlucky.com
+  - [Version 2.1 is free](antirsi.onnlucky.com)
 - Google Drive*
   - Log into Google account
 - Dropbox*
@@ -50,7 +49,7 @@ Download and Install:
   for VPN access to NYU network
 - TextWrangler
 - SequelPro
-  - save connection info for Favorites
+  - Save connection info for various favorites
 - Various printer softwares (first time I hook up to printer)
 
 *These apps should start on system login, which can be set at
@@ -94,7 +93,7 @@ sudo gem install homesick
 ```
 
 #### If setting uip homesick for the first time
-Create repo in Github called `dotfiles`.
+Create repo in GitHub called `dotfiles`.
 
 Clone the repo:
 
@@ -169,7 +168,8 @@ homesick symlink dotfiles
 ```
 
 Install pathogen as a git submodule
-(see http://www.tedreed.info/setup/2012/03/30/pathogen-and-plugins/):
+(see [this tutorial](http://www.tedreed.info/setup/2012/03/30/pathogen-and-plugins/) and
+[this cheatsheet about git submodules in general](http://blog.jacius.info/git-submodule-cheat-sheet/)):
 
 ```
 cd ~/.homesick/repos/dotfiles
