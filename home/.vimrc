@@ -105,13 +105,13 @@ set smartcase
 " File navigation "
 """""""""""""""""""
 " Ignore compiled files
-set wildignore+=*.o,*.class,*.rbc,*.pyc,*.swp,*.un~,*.obj
+set wildignore+=*.o,*.class,*.rbc,*.pyc
 
 " Ignore version control directories
-set wildignore+=.svn,.git
+set wildignore+=.git,.svn,.hg
 
 " Ignore temp/cached files
-set wildignore+=vendor/gems/*,*/tmp/cache/*,CACHE/*,*/CACHE/*
+set wildignore+=*.swp,*.un~,vendor/gems/*,*/tmp/cache/*,CACHE/*,*/CACHE/*
 
 " Ignore backups
 set wildignore+=backups
