@@ -46,8 +46,8 @@ Download and Install:
   - Log into Dropbox account
 - Skype
   - Log into Skype account
-- Cisco AnyConnect, for VPN access to NYU network
-  - https://nyu.service-now.com/servicelink/kb_search.do?id-KB0011175
+- [Cisco AnyConnect](https://nyu.service-now.com/servicelink/kb_search.do?id-KB0011175), 
+  for VPN access to NYU network
 - TextWrangler
 - SequelPro
   - save connection info for Favorites
