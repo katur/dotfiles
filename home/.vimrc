@@ -54,6 +54,20 @@ set ruler
 set number
 
 
+""""""""""""""""""
+" Column 80 Club "
+""""""""""""""""""
+" Highlight column 80, dark gray (subtle on black background)
+set colorcolumn=80
+highlight ColorColumn ctermbg=233
+
+" Define text width limit
+set textwidth=79
+
+" Auto-wrap text and comments on textwidth
+set formatoptions+=tc
+
+
 """"""""
 " Tabs "
 """"""""
