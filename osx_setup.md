@@ -36,9 +36,9 @@ Download and Install:
     and idle time
 - BetterTouchTool*
   - Enable window snapping in preferences
-- [f.lux](justgetflux.com)*
+- [f.lux](http://justgetflux.com)*
 - AntiRSI*
-  - [Version 2.1 is free](antirsi.onnlucky.com)
+  - [Version 2.1 is free](http://antirsi.onnlucky.com)
 - Google Drive*
   - Log into Google account
 - Dropbox*
