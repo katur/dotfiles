@@ -93,8 +93,8 @@ Dot Files
 sudo gem install homesick
 ```
 
-#### If first time using homesick
-Create new repo in Github called `dotfiles`, with just a README.
+#### If setting uip homesick for the first time
+Create repo in Github called `dotfiles`.
 
 Clone the repo:
 
@@ -102,7 +102,7 @@ Clone the repo:
 homesick clone katur/dotfiles
 ```
 
-Edit ~/.homesick/repos/dotfiles/.git/config to use the ssh URL instead of http
+Edit `~/.homesick/repos/dotfiles/.git/config` to use the ssh URL instead of http
 URL for connecting (can find this URL in the repo on GitHub).
 
 Create directory to hold the dotfiles that will be symlinked into `~`:
@@ -111,15 +111,15 @@ Create directory to hold the dotfiles that will be symlinked into `~`:
 mkdir ~/.homesick/repos/dotfiles/home
 ```
 
-Add `.bash_profile` and `.bashrc` files (or whatever shell configuration 
+Add/move `.bash_profile` and `.bashrc` files (or whatever shell configuration 
 files you want) to `~/.homesick/repos/dotfiles/home`. Commit and push 
-changes, then create the symlinks:
+changes. Then, to create the symlinks into `~`:
 
 ```
 homesick symlink dotfiles
 ```
 
-The bash settings should now work (if not, try restarting Terminal).
+The bash settings should now work properly (if not, try restarting Terminal).
 
 Move the global git config file to the repo, too:
 
@@ -132,7 +132,7 @@ homesick symlink dotfiles
 Follow same steps to clone the repo and to use ssh instead of http.
 
 If the repo contains a git config file redundant with or better
-than that at ~/.gitconfig, will *probably* have to do something like:
+than that at `~/.gitconfig`, will *probably* have to do something like:
 
 ```
 rm ~/.gitconfig
@@ -150,9 +150,10 @@ homesick symlink dotfiles
 
 Vim
 ---
-Add/move `.vimrc` to dotfiles repo if not already there.
+#### If setting up homesick for the first time
+Add/move `.vimrc` file to `~/.homesick/repos/dotfiles/home`.
 
-If adding `~/.vim` to the dotfiles repo for the first time:
+Move `~/.vim` to the dotfiles repo:
 
 ```
 mv ~/.vim ~/.homesick/repos/dotfiles/home/
@@ -196,6 +197,10 @@ Install ctrlp as a git submodule:
 cd ~/.homesick/repos/dotfiles
 git submodule add https://github.com/kien/ctrlp.vim.git home/.vim/bundle/ctrlp
 ```
+
+#### If already have a homesick repo
+Not much should be needed, but make sure to remove any already-present 
+`~/.vim` or `~/.vimrc` prior to making the symlinks.
 
 
 Homebrew
