@@ -1,4 +1,10 @@
-# COLORS ----------------------------------------------------------------------
+# katherine's bash settings
+
+
+##########
+# Colors #
+##########
+
 # Define colors to use later
 export COLOR_NULL='\033[0m' # No Color
 export COLOR_WHITE='\033[1;37m'
@@ -34,8 +40,10 @@ export LS_COLORS='di=36;40:ln=35;40:so=32;40:pi=33;40:ex=31;40:bd=34;46:cd=34;43
 alias grep='grep --color=auto'
 
 
+##########
+# Prompt #
+##########
 
-# PROMPT ----------------------------------------------------------------------
 # Get git branch if in a git directory, to add to prompt
 function get_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ \[\1\]/'
@@ -43,18 +51,22 @@ function get_git_branch {
 export PS1="\[${COLOR_GREEN}\]\u@\h:\w\$(get_git_branch) > \[${COLOR_NULL}\]"
 
 
+#################
+# Auto complete #
+#################
 
-# AUTO COMPLETE ---------------------------------------------------------------
-#   Use `bind` instead of using a separate ~/.inputrc file. See:
-#   http://www.gnu.org/software/bash/manual/html_node/Readline-Init-File.html
+# Use `bind` instead of using a separate ~/.inputrc file. See:
+# http://www.gnu.org/software/bash/manual/html_node/Readline-Init-File.html
 bind 'set completion-ignore-case on'
 
 # Show ambiguities without ringing bell
 bind 'set show-all-if-ambiguous on'
 
 
+##################
+# Simple aliases #
+##################
 
-# SIMPLE ALIASES --------------------------------------------------------------
 # Moving up directories
 alias ..='cd ..'
 alias ...='cd .. ; cd ..'
@@ -74,18 +86,22 @@ alias lla='ls -lah'
 alias g='grep -i'
 alias f='find . -iname'
 
-# Disk usage
+
+#############
+# Fun stuff #
+#############
+
+# Most used commands, modified from
+# http://lifehacker.com/274317/turbocharge-your-terminal
+alias profileme="history | tr -s ' ' | cut -d ' ' -f 3 | sort | uniq -c | sort -nr | head -20"
+
+# Biggest disk usage
 alias ducks='du -cks * | sort -rn | head -10'
 
 
+############################
+# Python virtualenvwrapper #
+############################
 
-# SHOW MOST USED COMMANDS -----------------------------------------------------
-#   Modified from:
-#   http://lifehacker.com/274317/turbocharge-your-terminal
-alias profileme="history | tr -s ' ' | cut -d ' ' -f 3 | sort | uniq -c | sort -nr | head -20"
-
-
-
-# PYTHON VIRTUALENVWRAPPER ----------------------------------------------------
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh

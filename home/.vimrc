@@ -1,8 +1,10 @@
 " katherine's vim settings
 
+
 """"""""""""
 " Pathogen "
 """"""""""""
+
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
@@ -10,6 +12,7 @@ call pathogen#infect()
 """"""""""""""""
 " Autocommands "
 """"""""""""""""
+
 if !exists("autocommands_loaded")
   let autocommands_loaded = 1
 
@@ -27,6 +30,7 @@ endif
 """""""""""""""""
 " Editing style "
 """""""""""""""""
+
 " Figure out the type of files
 filetype plugin on
 filetype indent on
@@ -67,6 +71,7 @@ set foldlevel=99
 """"""""
 " Tabs "
 """"""""
+
 " Set tab size
 set tabstop=2
 
@@ -87,6 +92,7 @@ set backspace=eol,start,indent
 """"""""""""""""""
 " Column 80 Club "
 """"""""""""""""""
+
 " Highlight column 80, dark gray (subtle on black background)
 set colorcolumn=80
 highlight ColorColumn ctermbg=233
@@ -101,6 +107,7 @@ set formatoptions+=tc
 """"""""""""""""""
 " Searching text "
 """"""""""""""""""
+
 " Highlight search results
 set hlsearch
 
@@ -114,6 +121,7 @@ set smartcase
 """""""""""""""""""
 " File navigation "
 """""""""""""""""""
+
 " Ignore compiled files
 set wildignore+=*.o,*.class,*.rbc,*.pyc
 
