@@ -161,7 +161,7 @@ are present in `~/.homesick/repos/dotfiles/.gitignore`:
 *.swp
 ```
 
-Add/move `~/.vimrc` file and `~/.vim` directory to 
+Add/move `~/.vimrc` file and `~/.vim` directory to
 `~/.homesick/repos/dotfiles/home`, then create the symlinks:
 
 ```
@@ -179,7 +179,7 @@ cd ~/.homesick/repos/dotfiles
 git submodule add https://github.com/tpope/vim-pathogen.git home/.vim/bundle/vim-pathogen
 ```
 
-NOTE: if encounter problem with `tags` files changing the pathogen repo,
+*NOTE:* if encounter problem with `tags` files changing the pathogen repo,
 do the following (per the
 [pathogen FAQ](https://github.com/tpope/vim-pathogen/blob/master/README.markdown#faq)):
 
