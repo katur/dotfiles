@@ -17,6 +17,7 @@ System Preferences changes:
 - Dock: automatically hide / show
 - Date & Time > Clock: 24-hour clock, show day, show date
 - Desktop & Screensaver > Desktop: change it to something
+- iCloud: select only iCloud Drive and Photos
 
 Finder > Preferences changes:
 
