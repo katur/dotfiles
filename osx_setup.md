@@ -1,14 +1,14 @@
 OS X Setup
 ==========
 
-This is what I did to set up my Mac.
+This is what I do to set up my Mac.
 
 During OS X Installation
 ------------------------
-- did not import any TimeMachine backup
-- did log into iCloud
-- did not set up iKeychain (will keep using Lastpass for now)
-- did encrypt the disk, allowing password recovery through iCloud password
+- do not import any TimeMachine backup
+- do log into iCloud
+- do not set up iKeychain (will keep using Lastpass for now)
+- do encrypt the disk, allowing password recovery through iCloud password
 
 Remove most everything from the Dock, adding Terminal only.
 
