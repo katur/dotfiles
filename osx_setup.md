@@ -180,8 +180,11 @@ git submodule add https://github.com/tpope/vim-pathogen.git home/.vim/bundle/vim
 ```
 
 *NOTE:* if encounter problem with `tags` files changing the pathogen repo,
-do the following (per the
-[pathogen FAQ](https://github.com/tpope/vim-pathogen/blob/master/README.markdown#faq)):
+try the following, per the
+[pathogen
+FAQ](https://github.com/tpope/vim-pathogen/blob/master/README.markdown#faq)
+(I did not do this yet, because I think it is not an issue due to using a
+git submodule):
 
 ```
 git config --global core.excludesfile '~/.cvsignore'
