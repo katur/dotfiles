@@ -14,7 +14,9 @@ Remove most everything from the Dock, adding Terminal only.
 
 System Preferences changes:
 
-- Set the Dock to automatically disappear / reappear
+- Dock: automatically hide / show
+- Date & Time > Clock: 24-hour clock, show day, show date
+- Desktop & Screensaver > Desktop: set to solid color
 
 Finder > Preferences changes:
 
