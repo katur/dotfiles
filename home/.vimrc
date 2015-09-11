@@ -122,7 +122,7 @@ set smartcase
 " File navigation "
 """""""""""""""""""
 
-" Ignore compiled files
+" Ignore compiled files (e.g. in tab completion, ctrlp)
 set wildignore+=*.o,*.class,*.rbc,*.pyc
 
 " Ignore version control directories
@@ -133,3 +133,29 @@ set wildignore+=*.swp,*.un~,vendor/gems/*,*/tmp/cache/*,CACHE/*,*/CACHE/*
 
 " Ignore backups
 set wildignore+=backups
+
+" Shortcut to jump between split panes
+" NOTE: 'nore' means not recursive
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
+inoremap <C-h> <esc><C-w>h
+inoremap <C-j> <esc><C-w>j
+inoremap <C-k> <esc><C-w>k
+inoremap <C-l> <esc><C-w>l
+
+
+"""""""""""""
+" Syntastic "
+"""""""""""""
+" Recommended settings from
+" https://github.com/scrooloose/syntastic#3-recommended-settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0

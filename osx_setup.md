@@ -16,7 +16,7 @@ System Preferences changes:
 
 - Dock: automatically hide / show
 - Date & Time > Clock: 24-hour clock, show day, show date
-- Desktop & Screensaver > Desktop: set to solid color
+- Desktop & Screensaver > Desktop: change it to something
 
 Finder > Preferences changes:
 
@@ -204,6 +204,17 @@ cd ~/.homesick/repos/dotfiles
 git submodule add https://github.com/kien/ctrlp.vim.git home/.vim/bundle/ctrlp
 ```
 
+Install syntastic as a git submodule:
+
+```
+cd ~/.homesick/repos/dotfiles
+git submodule add https://github.com/scrooloose/syntastic.git home/.vim/bundle/syntastic
+```
+
+Add the
+[recommended syntastic settings](https://github.com/scrooloose/syntastic#3-recommended-settings)
+to .vimrc.
+
 #### If already have a homesick repo
 Not much should be needed, but make sure to remove any already-present
 `~/.vim` or `~/.vimrc` prior to making the symlinks.
@@ -226,15 +237,6 @@ is the Homebrew documentation about brewing Python.
 ```
 brew install python
 pip install --upgrade pip setuptools
-pip install virtualenv
-pip install virtualenvwrapper
-```
-
-Confirm necessary virtualenvwrapper config is in `~/.bashrc`:
-
-```
-export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
 ```
 
 *NOTE:* Originally, I installed and upgraded python3 as well:
@@ -250,6 +252,25 @@ these files exist in python2 directories.
 [This is a known issue.](https://github.com/Homebrew/homebrew/issues/25752)
 So, since I do not need Python 3 right now anyway, I uninstalled the brewed
 Pythons and packages, and started over, brewing only python2.
+
+#### Global Python Packages
+
+Install virtualenv and virtualenvwrapper for creating isolated Python
+package environments, and flake8 for syntax and style checking (which I
+do in vim with Syntastic):
+
+```
+pip install virtualenv
+pip install virtualenvwrapper
+pip install flake8
+```
+
+Confirm virtualenvwrapper config is in `~/.bashrc`:
+
+```
+export WORKON_HOME=$HOME/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
+```
 
 
 MySQL
