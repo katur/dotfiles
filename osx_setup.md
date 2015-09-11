@@ -95,7 +95,7 @@ Dot Files
 sudo gem install homesick
 ```
 
-#### If setting uip homesick for the first time
+#### If setting up homesick for the first time
 Create repo in GitHub called `dotfiles`.
 
 Clone the repo:
