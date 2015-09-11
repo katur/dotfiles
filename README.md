@@ -10,4 +10,4 @@ are located in [home](/home).
 
 Informal documentation on my steps to set up a new OS X box
 (software installations and preference changes in addition to dotfiles)
-in [os\_setup.md](os_setup.md).
+in [osx\_setup.md](osx_setup.md).
