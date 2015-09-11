@@ -161,16 +161,14 @@ are present in `~/.homesick/repos/dotfiles/.gitignore`:
 *.swp
 ```
 
-Add/move `.vimrc` file to `~/.homesick/repos/dotfiles/home`.
-
-Move `~/.vim` to the repo:
+Add/move `~/.vimrc` file and `~/.vim` directory to 
+`~/.homesick/repos/dotfiles/home`, then create the symlinks:
 
 ```
-mv ~/.vim ~/.homesick/repos/dotfiles/home/
 homesick symlink dotfiles
 ```
 
-Install pathogen as a git submodule
+Install pathogen as a git submodule in the dotfiles repo
 (see
 [this tutorial](http://www.tedreed.info/setup/2012/03/30/pathogen-and-plugins/)
 and
@@ -197,17 +195,11 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 ```
 
-Install ctrlp as a git submodule:
+Install ctrlp and syntastic as git submodules in the dotfiles repo:
 
 ```
 cd ~/.homesick/repos/dotfiles
 git submodule add https://github.com/kien/ctrlp.vim.git home/.vim/bundle/ctrlp
-```
-
-Install syntastic as a git submodule:
-
-```
-cd ~/.homesick/repos/dotfiles
 git submodule add https://github.com/scrooloose/syntastic.git home/.vim/bundle/syntastic
 ```
 
