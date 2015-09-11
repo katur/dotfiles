@@ -149,7 +149,8 @@ inoremap <C-l> <esc><C-w>l
 """""""""""""
 " Syntastic "
 """""""""""""
-" Recommended settings from
+
+" Recommended beginner settings from
 " https://github.com/scrooloose/syntastic#3-recommended-settings
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
