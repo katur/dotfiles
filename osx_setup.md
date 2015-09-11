@@ -179,9 +179,9 @@ cd ~/.homesick/repos/dotfiles
 git submodule add https://github.com/tpope/vim-pathogen.git home/.vim/bundle/vim-pathogen
 ```
 
-Per the
-[pathogen FAQ](https://github.com/tpope/vim-pathogen/blob/master/README.markdown#faq),
-do the following to keep `tags` files out of repo:
+NOTE: if encounter problem with `tags` files changing the pathogen repo,
+do the following (per the
+[pathogen FAQ](https://github.com/tpope/vim-pathogen/blob/master/README.markdown#faq)):
 
 ```
 git config --global core.excludesfile '~/.cvsignore'
