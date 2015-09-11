@@ -211,6 +211,22 @@ Add the
 [recommended syntastic settings](https://github.com/scrooloose/syntastic#3-recommended-settings)
 to .vimrc.
 
+Create ftplugin directory for language-specific vim rules:
+
+```
+mkdir ~/.homesick/repos/dotfiles/home/.vim/ftplugin
+```
+
+Here is an example Python rules, to put in
+`~/.homesick/repos/dotfiles/home/.vim/ftplugin/python.vim`:
+
+```
+setlocal tabstop=4
+setlocal softtabstop=4
+setlocal shiftwidth=4
+```
+
+
 #### If already have a homesick repo
 Not much should be needed, but make sure to remove any already-present
 `~/.vim` or `~/.vimrc` prior to making the symlinks.
@@ -248,8 +264,6 @@ these files exist in python2 directories.
 [This is a known issue.](https://github.com/Homebrew/homebrew/issues/25752)
 So, since I do not need Python 3 right now anyway, I uninstalled the brewed
 Pythons and packages, and started over, brewing only python2.
-
-#### Global Python Packages
 
 Install virtualenv and virtualenvwrapper for creating isolated Python
 package environments, and flake8 for syntax and style checking (which I
