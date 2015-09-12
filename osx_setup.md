@@ -199,12 +199,13 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 ```
 
-Install ctrlp and syntastic as git submodules in the dotfiles repo:
+Install other packages as git submodules in the dotfiles repo:
 
 ```
 cd ~/.homesick/repos/dotfiles
 git submodule add https://github.com/kien/ctrlp.vim.git home/.vim/bundle/ctrlp
 git submodule add https://github.com/scrooloose/syntastic.git home/.vim/bundle/syntastic
+git submodule add https://github.com/kchmck/vim-coffee-script.git home/.vim/bundle/vim-coffee-script
 ```
 
 Add the
