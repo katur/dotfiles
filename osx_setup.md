@@ -318,3 +318,14 @@ mysql -u root -p
 mysql> CREATE USER 'dev'@'localhost' IDENTIFIED BY '<password>';
 mysql> GRANT ALL PRIVILEGES ON *.* TO 'dev'@'localhost';
 ```
+
+
+More Dev Stuff
+--------------
+```
+sudo gem install sass
+brew install node
+sudo npm install -g coffee-script@1.9.0
+```
+
+Note: there is a bug in coffee-script@1.9.1
