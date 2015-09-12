@@ -199,12 +199,13 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 ```
 
-Install ctrlp and syntastic as git submodules in the dotfiles repo:
+Install other packages as git submodules in the dotfiles repo:
 
 ```
 cd ~/.homesick/repos/dotfiles
 git submodule add https://github.com/kien/ctrlp.vim.git home/.vim/bundle/ctrlp
 git submodule add https://github.com/scrooloose/syntastic.git home/.vim/bundle/syntastic
+git submodule add https://github.com/kchmck/vim-coffee-script.git home/.vim/bundle/vim-coffee-script
 ```
 
 Add the
@@ -317,3 +318,14 @@ mysql -u root -p
 mysql> CREATE USER 'dev'@'localhost' IDENTIFIED BY '<password>';
 mysql> GRANT ALL PRIVILEGES ON *.* TO 'dev'@'localhost';
 ```
+
+
+More Dev Stuff
+--------------
+```
+sudo gem install sass
+brew install node
+sudo npm install -g coffee-script@1.9.0
+```
+
+Note: there is a bug in coffee-script@1.9.1
