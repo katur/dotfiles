@@ -163,7 +163,7 @@ are present in `~/.homesick/repos/dotfiles/.gitignore`:
 ```
 
 Add/move `~/.vimrc` file and `~/.vim` directory to
-`~/.homesick/repos/dotfiles/home`, then create the symlinks
+`~/.homesick/repos/dotfiles/home`, then create the homesick symlinks
 (do this right away, before ~/.vim is regenerated):
 
 ```
@@ -186,6 +186,7 @@ setlocal tabstop=4
 setlocal softtabstop=4
 setlocal shiftwidth=4
 ```
+
 
 #### Set up Pathogen for vim package management
 Install pathogen as a git submodule in the dotfiles repo
@@ -218,8 +219,6 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 ```
 
-As always, create the homesick symlinks to start using pathogen.
-
 
 #### Get other vim packages
 Install other packages as git submodules in the dotfiles repo:
@@ -245,10 +244,6 @@ let g:Powerline_symbols = 'fancy'
 Get a vim-powerline-patched (-glyphed) font, and install it by copying
 it into Font Book app. Once installed, change Terminal preferences
 to use the font.
-
-
-#### Lastly
-Remember to craete all the homesick symlinks for everything to work.
 
 
 ### *If already have a homesick repo
