@@ -163,3 +163,13 @@ let g:syntastic_always_populate_loc_list = 1
 
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+
+"""""""""""""
+" Powerline "
+"""""""""""""
+" Always show status line
+set laststatus=2
+
+" Enable colors / nice font / arrows
+let g:Powerline_symbols = 'fancy'

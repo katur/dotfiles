@@ -96,7 +96,7 @@ Dot Files
 sudo gem install homesick
 ```
 
-#### If setting up homesick for the first time
+### *If setting up homesick for the first time*
 Create repo in GitHub called `dotfiles`.
 
 Clone the repo:
@@ -131,7 +131,7 @@ mv ~/.gitconfig ~/.homesick/repos/dotfiles/home/
 homesick symlink dotfiles
 ```
 
-#### If already have a homesick repo
+### *If already have a homesick repo*
 Follow same steps to clone the repo and to use SSH instead of HTTP.
 
 If the repo contains a git config file redundant with or better
@@ -153,7 +153,7 @@ homesick symlink dotfiles
 
 Vim
 ---
-#### If setting up homesick for the first time
+### *If setting up homesick for the first time*
 To prevent committing temporary vim files and logs, make sure these
 are present in `~/.homesick/repos/dotfiles/.gitignore`:
 
@@ -163,12 +163,31 @@ are present in `~/.homesick/repos/dotfiles/.gitignore`:
 ```
 
 Add/move `~/.vimrc` file and `~/.vim` directory to
-`~/.homesick/repos/dotfiles/home`, then create the symlinks:
+`~/.homesick/repos/dotfiles/home`, then create the symlinks
+(do this right away, before ~/.vim is regenerated):
 
 ```
 homesick symlink dotfiles
 ```
 
+
+#### Define language-specific vim rules
+Create ftplugin directory for language-specific vim rules:
+
+```
+mkdir ~/.homesick/repos/dotfiles/home/.vim/ftplugin
+```
+
+Here is an example Python rules, to put in
+`~/.homesick/repos/dotfiles/home/.vim/ftplugin/python.vim`:
+
+```
+setlocal tabstop=4
+setlocal softtabstop=4
+setlocal shiftwidth=4
+```
+
+#### Set up Pathogen for vim package management
 Install pathogen as a git submodule in the dotfiles repo
 (see
 [this tutorial](http://www.tedreed.info/setup/2012/03/30/pathogen-and-plugins/)
@@ -199,36 +218,40 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 ```
 
+As always, create the homesick symlinks to start using pathogen.
+
+
+#### Get other vim packages
 Install other packages as git submodules in the dotfiles repo:
 
 ```
 cd ~/.homesick/repos/dotfiles
 git submodule add https://github.com/kien/ctrlp.vim.git home/.vim/bundle/ctrlp
+git submodule add https://github.com/Lokaltog/vim-powerline.git home/.vim/bundle/vim-powerline
 git submodule add https://github.com/scrooloose/syntastic.git home/.vim/bundle/syntastic
 git submodule add https://github.com/kchmck/vim-coffee-script.git home/.vim/bundle/vim-coffee-script
 ```
 
-Add the
+To configure Syntastic, add the
 [recommended syntastic settings](https://github.com/scrooloose/syntastic#3-recommended-settings)
 to .vimrc.
 
-Create ftplugin directory for language-specific vim rules:
-
+To configure Powerline with improved font, add the following to .vimrc:
 ```
-mkdir ~/.homesick/repos/dotfiles/home/.vim/ftplugin
-```
-
-Here is an example Python rules, to put in
-`~/.homesick/repos/dotfiles/home/.vim/ftplugin/python.vim`:
-
-```
-setlocal tabstop=4
-setlocal softtabstop=4
-setlocal shiftwidth=4
+set laststatus=2
+let g:Powerline_symbols = 'fancy'
 ```
 
+Get a vim-powerline-patched (-glyphed) font, and install it by copying
+it into Font Book app. Once installed, change Terminal preferences
+to use the font.
 
-#### If already have a homesick repo
+
+#### Lastly
+Remember to craete all the homesick symlinks for everything to work.
+
+
+### *If already have a homesick repo
 Not much should be needed, but make sure to remove any already-present
 `~/.vim` or `~/.vimrc` prior to making the symlinks.
 
