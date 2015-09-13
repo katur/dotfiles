@@ -228,6 +228,7 @@ cd ~/.homesick/repos/dotfiles
 git submodule add https://github.com/kien/ctrlp.vim.git home/.vim/bundle/ctrlp
 git submodule add https://github.com/Lokaltog/vim-powerline.git home/.vim/bundle/vim-powerline
 git submodule add https://github.com/scrooloose/syntastic.git home/.vim/bundle/syntastic
+git submodule add https://github.com/plasticboy/vim-markdown.git home/.vim/bundle/vim-markdown
 git submodule add https://github.com/kchmck/vim-coffee-script.git home/.vim/bundle/vim-coffee-script
 ```
 
@@ -338,12 +339,13 @@ mysql> GRANT ALL PRIVILEGES ON *.* TO 'dev'@'localhost';
 ```
 
 
-More Dev Stuff
---------------
+Web Dev Stuff (sass, coffee, etc)
+---------------------------------
 ```
 sudo gem install sass
 brew install node
 sudo npm install -g coffee-script@1.9.0
+sudo npm install -g gulp
 ```
 
 Note: there is a bug in coffee-script@1.9.1
