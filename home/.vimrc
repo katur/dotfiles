@@ -134,6 +134,9 @@ set wildignore+=*.swp,*.un~,vendor/gems/*,*/tmp/cache/*,CACHE/*,*/CACHE/*
 " Ignore backups
 set wildignore+=backups
 
+" Ignore Node.js modules
+set wildignore+=node_modules
+
 " Shortcut to jump between split panes
 " NOTE: 'nore' means not recursive
 noremap <C-h> <C-w>h
