@@ -54,6 +54,10 @@ Download and Install:
 - SequelPro
   - Save connection info for various favorites
 - Various printer softwares (first time I hook up to printer)
+- Caffeine
+  - NOTE: installing from the App Store failed with a mysterious error
+    message; perhaps not ready for el capitan. So, do
+    [direct download](http://lightheadsw.com/caffeine/) instead.
 
 *These apps should start on system login, which can be set at
 System Preferences > Users & Groups > Login Items
@@ -349,3 +353,11 @@ sudo npm install -g gulp
 ```
 
 Note: there is a bug in coffee-script@1.9.1
+
+
+After El Capitan update
+-----------------------
+Restore my ownership of /usr/local
+```
+sudo chown $(whoami):admin /usr/local && sudo chown -R $(whoami):admin /usr/local
+```
