@@ -72,6 +72,10 @@ cols to fill screen, no Audible bell, and unqualified Visual bell.
 Download and install OS X Command Line Tools (to get here, follow
 instructions on prompt that appears during git init attempt)
 
+Download a vim-powerline-patched (-glyphed) font, and install it by copying
+it into Font Book app. Once installed, change Terminal preferences
+to use the font. I got: Droid Sans Mono for Powerline Regular.
+
 
 SSH
 ---
@@ -240,15 +244,6 @@ git submodule add https://github.com/bling/vim-airline home/.vim/bundle/vim-airl
 To configure Syntastic, add the
 [recommended syntastic settings](https://github.com/scrooloose/syntastic#3-recommended-settings)
 to .vimrc.
-
-Get a vim-powerline-patched (-glyphed) font, and install it by copying
-it into Font Book app. Once installed, change Terminal preferences
-to use the font.
-
-To configure airline with the improved font, add the following to .vimrc:
-```
-let g:airline_powerline_fonts = 1
-```
 
 
 ### *If already have a homesick repo
