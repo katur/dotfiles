@@ -37,6 +37,7 @@ Download and Install:
   - In Advanced Settings, change download location to Desktop
   - Ensure that LastPass preferences force logout after closing browser
     and idle time
+- Firefox
 - BetterTouchTool*
   - Enable window snapping in preferences
 - [f.lux](http://justgetflux.com)*
@@ -230,7 +231,6 @@ Install other packages as git submodules in the dotfiles repo:
 ```
 cd ~/.homesick/repos/dotfiles
 git submodule add https://github.com/kien/ctrlp.vim.git home/.vim/bundle/ctrlp
-git submodule add https://github.com/Lokaltog/vim-powerline.git home/.vim/bundle/vim-powerline
 git submodule add https://github.com/scrooloose/syntastic.git home/.vim/bundle/syntastic
 git submodule add https://github.com/plasticboy/vim-markdown.git home/.vim/bundle/vim-markdown
 git submodule add https://github.com/kchmck/vim-coffee-script.git home/.vim/bundle/vim-coffee-script
