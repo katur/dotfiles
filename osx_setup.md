@@ -234,21 +234,21 @@ git submodule add https://github.com/kien/ctrlp.vim.git home/.vim/bundle/ctrlp
 git submodule add https://github.com/scrooloose/syntastic.git home/.vim/bundle/syntastic
 git submodule add https://github.com/plasticboy/vim-markdown.git home/.vim/bundle/vim-markdown
 git submodule add https://github.com/kchmck/vim-coffee-script.git home/.vim/bundle/vim-coffee-script
+git submodule add https://github.com/bling/vim-airline home/.vim/bundle/vim-airline
 ```
 
 To configure Syntastic, add the
 [recommended syntastic settings](https://github.com/scrooloose/syntastic#3-recommended-settings)
 to .vimrc.
 
-To configure Powerline with improved font, add the following to .vimrc:
-```
-set laststatus=2
-let g:Powerline_symbols = 'fancy'
-```
-
 Get a vim-powerline-patched (-glyphed) font, and install it by copying
 it into Font Book app. Once installed, change Terminal preferences
 to use the font.
+
+To configure airline with the improved font, add the following to .vimrc:
+```
+let g:airline_powerline_fonts = 1
+```
 
 
 ### *If already have a homesick repo
