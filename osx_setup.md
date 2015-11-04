@@ -317,7 +317,7 @@ ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
 Run this script for setting a root password (and some other setup):
 
 ```
-mysql_secure_installationd
+mysql_secure_installation
 ```
 
 Choose these options:
