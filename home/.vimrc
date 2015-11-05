@@ -131,8 +131,8 @@ set wildignore+=.git,.svn,.hg
 " Ignore temp/cached files
 set wildignore+=*.swp,*.un~,vendor/gems/*,*/tmp/cache/*,CACHE/*,*/CACHE/*
 
-" Ignore backups
-set wildignore+=backups
+" Ignore backups and raw materials
+set wildignore+=backups,materials
 
 " Ignore Node.js modules
 set wildignore+=node_modules
