@@ -328,13 +328,17 @@ sudo npm install -g gulp
 Note: there is a bug in coffee-script@1.9.1
 
 
-## Miscellaneous programming stuff
+## LaTeX
 
 Homebrew does not have LaTeX, and suggests using MacTeX.
 Download and install the BasicTeX distribution from
 [MaxTeX](https://www.tug.org/mactex).
 This is a ~100MB subset of the ~2GB full distribution, without
 the GUIs and some other stuff.
+
+Download and install the latest release of
+[TeX Live Utility app](http://amaxwell.github.io/tlutility/),
+for package management. Use this to require needed packages (e.g. enumitem).
 
 
 ## After El Capitan update
