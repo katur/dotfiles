@@ -105,3 +105,9 @@ alias ducks='du -cks * | sort -rn | head -10'
 
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
+
+
+########
+# Path #
+########
+export PATH="~/bin:$PATH"
