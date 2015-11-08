@@ -1,10 +1,10 @@
-OS X Setup
-==========
+# OS X Setup
 
-This is what I do to set up my Mac.
+These are the steps I did to set up the Mac I bought in 2015.
 
-During OS X Installation
-------------------------
+
+## OS X Installation
+
 - do not import any TimeMachine backup
 - do log into iCloud
 - do not set up iKeychain (will keep using Lastpass for now)
@@ -12,22 +12,24 @@ During OS X Installation
 
 Remove most everything from the Dock, adding Terminal only.
 
-System Preferences changes:
+
+## System Preferences
 
 - Dock: automatically hide / show
 - Date & Time > Clock: 24-hour clock, show day, show date
 - Desktop & Screensaver > Desktop: change it to something
 - iCloud: select only iCloud Drive and Photos
 
-Finder > Preferences changes:
+
+## Finder > Preferences
 
 - Change what shows up in Favorites sidebar to include home directory,
   and change default to home directory
 - Show all filename extensions
 
 
-Apps
-----
+## High-Level Applications
+
 Download and Install:
 
 - Chrome
@@ -64,8 +66,8 @@ Download and Install:
 System Preferences > Users & Groups > Login Items
 
 
-Terminal / OS X Command Line Tools
-----------------------------------
+## Terminal / OS X Command Line Tools
+
 Edit Terminal preferences for black background, 13pt font, rows and
 cols to fill screen, no Audible bell, and unqualified Visual bell.
 
@@ -77,19 +79,18 @@ it into Font Book app. Once installed, change Terminal preferences
 to use the font. I got: Droid Sans Mono for Powerline Regular.
 
 
-SSH
----
+## SSH
+
 Create SSH keys (no passphrase for now; to add later,
 [see this](http://www.cyberciti.biz/faq/howto-ssh-changing-passphrase/)):
-
 ```
 ssh-keygen -t rsa -b 4096 -C "my_email@lemonparty.org"
 ```
 
-Git
----
-Set bare bones global git configuration:
 
+## Git
+
+Set bare bones global git configuration:
 ```
 git config --global user.name "My Name"
 git config --global user.email "my_email@lemonparty.org"
@@ -99,17 +100,17 @@ git config --global push.default simple
 Add SSH public key to SSH Keys in my GitHub personal settings.
 
 
-Dot Files
----------
+## Dot Files
+
 ```
 sudo gem install homesick
 ```
 
 ### *If setting up homesick for the first time*
+
 Create repo in GitHub called `dotfiles`.
 
 Clone the repo:
-
 ```
 homesick clone katur/dotfiles
 ```
@@ -118,7 +119,6 @@ Edit `~/.homesick/repos/dotfiles/.git/config` to use the SSH URL instead of
 the HTTP URL for connecting (can find this URL in the repo on GitHub).
 
 Create directory to hold the files that will be symlinked into `~`:
-
 ```
 mkdir ~/.homesick/repos/dotfiles/home
 ```
@@ -126,7 +126,6 @@ mkdir ~/.homesick/repos/dotfiles/home
 Add/move `.bash_profile` and `.bashrc` files (or whatever shell configuration
 files you want) to `~/.homesick/repos/dotfiles/home`. Commit and push
 changes. Then, to create the symlinks into `~`:
-
 ```
 homesick symlink dotfiles
 ```
@@ -134,38 +133,29 @@ homesick symlink dotfiles
 The bash settings should now work properly (if not, try restarting Terminal).
 
 Move the global git config file to the repo, too:
-
 ```
 mv ~/.gitconfig ~/.homesick/repos/dotfiles/home/
 homesick symlink dotfiles
 ```
 
 ### *If already have a homesick repo*
+
 Follow same steps to clone the repo and to use SSH instead of HTTP.
 
-If the repo contains a git config file redundant with or better
-than that at `~/.gitconfig`, will *probably* have to do something like:
-
-```
-rm ~/.gitconfig
-```
-
-(The same goes for any other dotfiles in the repo that already exist
-on the computer)
+Before creating symlinks, might have to remove certain dotfiles that
+might already exist (e.g. ~/.gitconfig, ~/.bash_profile, ~/.bashrc, etc)
 
 Now create the symlinks:
-
 ```
 homesick symlink dotfiles
 ```
 
 
-Vim
----
+## Vim
+
 ### *If setting up homesick for the first time*
 To prevent committing temporary vim files and logs, make sure these
 are present in `~/.homesick/repos/dotfiles/.gitignore`:
-
 ```
 *.netrwhist
 *.swp
@@ -174,22 +164,20 @@ are present in `~/.homesick/repos/dotfiles/.gitignore`:
 Add/move `~/.vimrc` file and `~/.vim` directory to
 `~/.homesick/repos/dotfiles/home`, then create the homesick symlinks
 (do this right away, before ~/.vim is regenerated):
-
 ```
 homesick symlink dotfiles
 ```
 
 
-#### Define language-specific vim rules
-Create ftplugin directory for language-specific vim rules:
+#### Language-specific vim rules
 
+Create ftplugin directory for language-specific vim rules:
 ```
 mkdir ~/.homesick/repos/dotfiles/home/.vim/ftplugin
 ```
 
 Here is an example Python rules, to put in
 `~/.homesick/repos/dotfiles/home/.vim/ftplugin/python.vim`:
-
 ```
 setlocal tabstop=4
 setlocal softtabstop=4
@@ -197,13 +185,13 @@ setlocal shiftwidth=4
 ```
 
 
-#### Set up Pathogen for vim package management
+#### Vim package management with Pathogen
+
 Install pathogen as a git submodule in the dotfiles repo
 (see
 [this tutorial](http://www.tedreed.info/setup/2012/03/30/pathogen-and-plugins/)
 and
 [this cheatsheet about git submodules in general](http://blog.jacius.info/git-submodule-cheat-sheet/)):
-
 ```
 cd ~/.homesick/repos/dotfiles
 git submodule add https://github.com/tpope/vim-pathogen.git home/.vim/bundle/vim-pathogen
@@ -211,27 +199,24 @@ git submodule add https://github.com/tpope/vim-pathogen.git home/.vim/bundle/vim
 
 *NOTE:* if encounter problem with `tags` files changing the pathogen repo,
 try the following, per the
-[pathogen
-FAQ](https://github.com/tpope/vim-pathogen/blob/master/README.markdown#faq)
+[pathogen FAQ](https://github.com/tpope/vim-pathogen/blob/master/README.markdown#faq)
 (I did not do this yet, because I think it is not an issue due to using a
 git submodule):
-
 ```
 git config --global core.excludesfile '~/.cvsignore'
 echo tags >> ~/.cvsignore
 ```
 
 To start pathogen, add these to `~/.vimrc`:
-
 ```
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 ```
 
 
-#### Get other vim packages
-Install other packages as git submodules in the dotfiles repo:
+#### Vim packages
 
+Install packages as git submodules in the dotfiles repo:
 ```
 cd ~/.homesick/repos/dotfiles
 git submodule add https://github.com/kien/ctrlp.vim.git home/.vim/bundle/ctrlp
@@ -247,31 +232,29 @@ to .vimrc.
 
 
 ### *If already have a homesick repo
+
 Not much should be needed, but make sure to remove any already-present
 `~/.vim` or `~/.vimrc` prior to making the symlinks.
 
 
-Homebrew
---------
-Install Homebrew for OS X package management:
+## Homebrew
 
+Install Homebrew for OS X package management:
 ```
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 
-Python
-------
+## Python
+
 [Here](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Homebrew-and-Python.md)
 is the Homebrew documentation about brewing Python.
-
 ```
 brew install python
 pip install --upgrade pip setuptools
 ```
 
 *NOTE:* Originally, I installed and upgraded python3 as well:
-
 ```
 brew install python3
 pip3 install --upgrade pip setuptools
@@ -287,7 +270,6 @@ Pythons and packages, and started over, brewing only python2.
 Install virtualenv and virtualenvwrapper for creating isolated Python
 package environments, and flake8 for syntax and style checking (which I
 do in vim with Syntastic):
-
 ```
 pip install virtualenv
 pip install virtualenvwrapper
@@ -295,27 +277,24 @@ pip install flake8
 ```
 
 Confirm virtualenvwrapper config is in `~/.bashrc`:
-
 ```
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
 
-MySQL
------
+## MySQL
+
 ```
 brew install mysql
 ```
 
 Have MySQL start on startup:
-
 ```
 ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
 ```
 
 Run this script for setting a root password (and some other setup):
-
 ```
 mysql_secure_installation
 ```
@@ -330,7 +309,6 @@ Choose these options:
 
 
 Log in as root user to create a dev user:
-
 ```
 mysql -u root -p
 mysql> CREATE USER 'dev'@'localhost' IDENTIFIED BY '<password>';
@@ -338,8 +316,8 @@ mysql> GRANT ALL PRIVILEGES ON *.* TO 'dev'@'localhost';
 ```
 
 
-Web Dev Stuff (sass, coffee, etc)
----------------------------------
+## Web Dev Stuff (sass, coffee, etc)
+
 ```
 sudo gem install sass
 brew install node
@@ -350,8 +328,17 @@ sudo npm install -g gulp
 Note: there is a bug in coffee-script@1.9.1
 
 
-After El Capitan update
------------------------
+## Miscellaneous programming stuff
+
+Homebrew does not have LaTeX, and suggests using MacTeX.
+Download and install the BasicTeX distribution from
+[MaxTeX](https://www.tug.org/mactex).
+This is a ~100MB subset of the ~2GB full distribution, without
+the GUIs and some other stuff.
+
+
+## After El Capitan update
+
 Restore my ownership of /usr/local
 ```
 sudo chown $(whoami):admin /usr/local && sudo chown -R $(whoami):admin /usr/local
