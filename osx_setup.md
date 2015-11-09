@@ -66,7 +66,7 @@ Download and Install:
 System Preferences > Users & Groups > Login Items
 
 
-## Terminal / OS X Command Line Tools
+## Terminal Preferences / OS X Command Line Tools
 
 Edit Terminal preferences for black background, 13pt font, rows and
 cols to fill screen, no Audible bell, and unqualified Visual bell.
@@ -339,6 +339,12 @@ the GUIs and some other stuff.
 Download and install the latest release of
 [TeX Live Utility app](http://amaxwell.github.io/tlutility/),
 for package management. Use this to require needed packages (e.g. enumitem).
+
+
+## Miscellaneous command line packages
+```
+brew install pv
+```
 
 
 ## After El Capitan update
