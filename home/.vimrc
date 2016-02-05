@@ -1,6 +1,9 @@
 " katherine's vim settings
 
 
+set clipboard=unnamed
+
+
 """"""""""""
 " Pathogen "
 """"""""""""

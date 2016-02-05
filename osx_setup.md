@@ -61,6 +61,7 @@ Download and Install:
   - NOTE: installing from the App Store failed with a mysterious error
     message; perhaps not ready for el capitan. So, do
     [direct download](http://lightheadsw.com/caffeine/) instead.
+- Adobe Reader
 
 *These apps should start on system login, which can be set at
 System Preferences > Users & Groups > Login Items
@@ -341,10 +342,28 @@ Download and install the latest release of
 for package management. Use this to require needed packages (e.g. enumitem).
 
 
+# GPG
+```
+brew install gpg
+gpg --list-keys
+```
+This creates dir ~/.gnupg, file ~/.gnupg/gpg.conf, file ~/.gnupg/pubring.gpg,
+and file ~/.gnupg/trustdb.gpg
+
+TODO: I still need to set up my gpg keys. Research whether this should
+relate to ssh keys. Also might want to get the keys off my old laptop,
+since I may have registered these in places.
+
+
 ## Miscellaneous command line packages
 ```
 brew install pv
 ```
+
+
+## Heroku
+Download and install
+[Heroku Toolbelt for OS X](https://toolbelt.heroku.com/).
 
 
 ## After El Capitan update
