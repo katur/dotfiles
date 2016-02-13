@@ -59,6 +59,10 @@ bind 'set show-all-if-ambiguous on'
 # Simple aliases #
 ##################
 
+# To use the brewed vim (vi goes to the system vim, which is older and
+# causing a SEGV fault due to something with Syntastic and autocmds)
+alias vi='vim'
+
 # Moving up directories
 alias ..='cd ..'
 alias ...='cd .. ; cd ..'
