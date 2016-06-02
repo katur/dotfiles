@@ -107,3 +107,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 # Path #
 ########
 export PATH="~/bin:$PATH"
+
+
+# Init jenv
+if which jenv > /dev/null; then eval "$(jenv init -)"; fi

@@ -372,3 +372,57 @@ Restore my ownership of /usr/local
 ```
 sudo chown $(whoami):admin /usr/local && sudo chown -R $(whoami):admin /usr/local
 ```
+
+
+## Java
+
+First installed Eclipse for Java:
+http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/mars/2/eclipse-java-mars-2-macosx-cocoa-x86_64.tar.gz
+
+I also installed the legacy Java 6 runtime, from:
+https://support.apple.com/kb/DL1572?locale=en_US
+
+But then I got the error message:
+```
+Version 1.6.0_65 of the JVM is not suitable for this product.
+Version: 1.7 or greater is required
+```
+
+And switched to brewing stuff. First I got brew-cask:
+```
+brew tap caskroom/cask
+brew install brew-cask
+```
+
+Because this gave the caveat:
+```
+==> Caveats
+You must uninstall this formula. It is no longer needed to stay up to date,
+as Homebrew now takes care of that automatically.
+```
+
+I did:
+```
+brew uninstall brew-cask
+```
+
+Then the following (which required password to write to
+/opt/homebrew-cask/Caskroom):
+```
+brew cask install java
+```
+
+Then I installed jenv:
+```
+brew install jenv
+```
+
+And added the following to .bashrc, to initialize jenv:
+```
+if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+```
+
+Then I added the newly installed java:
+```
+jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/
+```
