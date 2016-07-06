@@ -374,6 +374,12 @@ sudo chown $(whoami):admin /usr/local && sudo chown -R $(whoami):admin /usr/loca
 ```
 
 
+## Jekyll
+```
+sudo gem install jekyll
+```
+
+
 ## Java
 
 First installed Eclipse for Java:
