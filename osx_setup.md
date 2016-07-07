@@ -268,6 +268,13 @@ these files exist in python2 directories.
 So, since I do not need Python 3 right now anyway, I uninstalled the brewed
 Pythons and packages, and started over, brewing only python2.
 
+*ENDNOTE*
+
+In RC, I installed python 3 again:
+```
+brew install python3
+```
+
 Install virtualenv and virtualenvwrapper for creating isolated Python
 package environments, and flake8 for syntax and style checking (which I
 do in vim with Syntastic):
