@@ -252,16 +252,16 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 is the Homebrew documentation about brewing Python.
 ```
 brew install python
-pip install --upgrade pip setuptools
-```
-
-*NOTE:* Originally, I installed and upgraded python3 as well:
-```
 brew install python3
+pip install --upgrade pip setuptools
 pip3 install --upgrade pip setuptools
 ```
 
-However, the upgrade command overwrites the default pip and easy_install
+*NOTE:*
+When I originally installed and upgraded python3, I ran into
+this issue.
+
+However, the --upgrade command overwrites the default pip and easy_install
 such that they use python3 instead of python2, despite the fact that
 these files exist in python2 directories.
 [This is a known issue.](https://github.com/Homebrew/homebrew/issues/25752)
@@ -270,10 +270,6 @@ Pythons and packages, and started over, brewing only python2.
 
 *ENDNOTE*
 
-In RC, I installed python 3 again:
-```
-brew install python3
-```
 
 Install virtualenv and virtualenvwrapper for creating isolated Python
 package environments, and flake8 for syntax and style checking (which I
@@ -283,6 +279,27 @@ pip install virtualenv
 pip install virtualenvwrapper
 pip install flake8
 ```
+
+*NOTE:*
+I also did these with pip3, though shouldn't have, because in doing so,
+the virtualenv and virtualenvwrapper shell scripts (in /usr/local/bin)
+were overwritten to be python3, not python2. This might be related to the
+previous issue mentioned (or not?).
+```
+pip3 install virtualenv
+pip3 install virtualenvwrapper
+pip3 install flake8
+```
+
+To fix:
+```
+pip install --upgrade virtualenv
+pip install --upgrade virtualenvwrapper
+rm /usr/local/bin/virtualenv-clone
+```
+
+*ENDNOTE*
+
 
 Confirm virtualenvwrapper config is in `~/.bashrc`:
 ```
