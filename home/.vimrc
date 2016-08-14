@@ -121,6 +121,15 @@ set ignorecase
 set smartcase
 
 
+""""""""""""""""""
+" In/Out-denting "
+""""""""""""""""""
+
+" Keep visual selection while in/out-denting
+vmap > >gv
+vmap < <gv
+
+
 """""""""""""""""""
 " File navigation "
 """""""""""""""""""
