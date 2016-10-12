@@ -75,6 +75,12 @@ cols to fill screen, no Audible bell, and unqualified Visual bell.
 Download and install OS X Command Line Tools (to get here, follow
 instructions on prompt that appears during git init attempt)
 
+NOTE: after macOS Sierra upgrade, git was broken. do this to re-install macOS
+Command Line Tools:
+```
+xcode-select --install
+```
+
 Download a vim-powerline-patched (-glyphed) font, and install it by copying
 it into Font Book app. Once installed, change Terminal preferences
 to use the font. I got: Droid Sans Mono for Powerline Regular.
@@ -89,7 +95,19 @@ ssh-keygen -t rsa -b 4096 -C "my_email@lemonparty.org"
 ```
 
 
+## Homebrew
+
+Install Homebrew for OS X package management:
+```
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+
 ## Git
+
+```
+brew install git
+```
 
 Set bare bones global git configuration:
 ```
@@ -236,14 +254,6 @@ to .vimrc.
 
 Not much should be needed, but make sure to remove any already-present
 `~/.vim` or `~/.vimrc` prior to making the symlinks.
-
-
-## Homebrew
-
-Install Homebrew for OS X package management:
-```
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
 
 
 ## Python
@@ -455,11 +465,4 @@ if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 Then I added the newly installed java:
 ```
 jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/
-```
-
-
-## macOS Sierra
-`git` was broken. So I installed the macOS Command Line Tools:
-```
-xcode-select --install
 ```
