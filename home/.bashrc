@@ -106,6 +106,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 ########
 # Path #
 ########
+
 export PATH="~/bin:$PATH"
 
 
