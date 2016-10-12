@@ -456,3 +456,10 @@ Then I added the newly installed java:
 ```
 jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/
 ```
+
+
+## macOS Sierra
+`git` was broken. So I installed the macOS Command Line Tools:
+```
+xcode-select --install
+```
