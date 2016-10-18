@@ -466,3 +466,10 @@ Then I added the newly installed java:
 ```
 jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/
 ```
+
+
+## Miscellaneous
+
+```
+brew install tree
+```
