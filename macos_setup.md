@@ -54,7 +54,7 @@ Download and Install:
 - [Cisco AnyConnect](https://nyu.service-now.com/servicelink/kb_search.do?id-KB0011175),
   for VPN access to NYU network
 - TextWrangler
-- SequelPro
+- [SequelPro](https://www.sequelpro.com/)
   - Save connection info for various favorites
 - Various printer softwares (first time I hook up to printer)
 - Caffeine
@@ -392,6 +392,7 @@ since I may have registered these in places.
 ## Miscellaneous command line packages
 ```
 brew install pv
+brew install tree
 ```
 
 
@@ -468,8 +469,12 @@ jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/
 ```
 
 
-## Miscellaneous
+## Relevant
+
+- [PSequel](http://www.psequel.com/)
 
 ```
-brew install tree
+brew install postgres
+brew services start postgresql
+brew services stop postgresql
 ```
