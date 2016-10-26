@@ -258,7 +258,7 @@ Not much should be needed, but make sure to remove any already-present
 
 ## Python
 
-[Here](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Homebrew-and-Python.md)
+[Here](https://github.com/Homebrew/brew/blob/master/docs/Homebrew-and-Python.md)
 is the Homebrew documentation about brewing Python.
 ```
 brew install python
