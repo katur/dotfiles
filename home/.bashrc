@@ -110,5 +110,18 @@ source /usr/local/bin/virtualenvwrapper.sh
 export PATH="~/bin:$PATH"
 
 
-# Init jenv
+########
+# Java #
+########
+
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+
+
+########
+# Ruby #
+########
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
