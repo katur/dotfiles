@@ -1,6 +1,13 @@
 " katherine's vim settings
 
 
+"""""""""""
+" General "
+"""""""""""
+
+" set the leader key
+let mapleader = ','
+
 set clipboard=unnamed
 
 
@@ -177,8 +184,21 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_python_python_exec = '/usr/local/bin/python'
 
 
+""""""""""
+" Ctrl-P "
+""""""""""
+let g:ctrlp_show_hidden = 1
+
+
 """""""""""
 " Airline "
 """""""""""
 " show the status line, even when you only have one split open
 set laststatus=2
+
+
+""""""""""""
+" NERDTree "
+""""""""""""
+map <leader>n  :NERDTreeToggle<cr>
+map <leader>nf :NERDTreeFind<cr>

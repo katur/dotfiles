@@ -243,6 +243,7 @@ git submodule add https://github.com/scrooloose/syntastic.git home/.vim/bundle/s
 git submodule add https://github.com/plasticboy/vim-markdown.git home/.vim/bundle/vim-markdown
 git submodule add https://github.com/kchmck/vim-coffee-script.git home/.vim/bundle/vim-coffee-script
 git submodule add https://github.com/bling/vim-airline home/.vim/bundle/vim-airline
+git submodule add https://github.com/scrooloose/nerdtree home/.vim/bundle/nerdtree
 ```
 
 To configure Syntastic, add the
