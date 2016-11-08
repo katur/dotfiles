@@ -12,6 +12,14 @@ These are the steps I did to set up the Mac I bought in 2015.
 
 Remove most everything from the Dock, adding Terminal only.
 
+Show hidden files in Finder:
+```
+defaults write com.apple.finder AppleShowAllFiles YES
+```
+
+Need to restart Finder to see this change (hold option while right-clicking
+Finder icon in the dock and click Relaunch)
+
 
 ## System Preferences
 
@@ -479,3 +487,20 @@ brew install postgres
 brew services start postgresql
 brew services stop postgresql
 ```
+
+
+## VirtualBox
+
+Install VirtualBox from https://www.virtualbox.org/wiki/Downloads
+
+Thought I needed the below to use https://github.com/xdissent/ievms/ (but then
+got MD5 issues with it, so abandoned after brewing unar):
+```
+brew install unar
+```
+
+Install IE9 (Win7), IE10 (Win7), IE11 (Win81), and Edge (Win10 Stable) from
+https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/
+
+Launch VirtualBox and import each by doing File > Import Appliance, and
+selecting the .ovf file. From there, the defaults are fine.
