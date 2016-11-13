@@ -54,6 +54,10 @@ bind 'set completion-ignore-case on'
 # Show ambiguities without ringing bell
 bind 'set show-all-if-ambiguous on'
 
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+
 
 ##################
 # Simple aliases #

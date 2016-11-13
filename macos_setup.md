@@ -402,6 +402,7 @@ since I may have registered these in places.
 ```
 brew install pv
 brew install tree
+brew install bash-completion
 ```
 
 
