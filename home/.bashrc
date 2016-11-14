@@ -36,11 +36,10 @@ alias grep='grep --color=auto'
 # Prompt #
 ##########
 
-# Get git branch if in a git directory, to add to prompt
-function get_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ \[\1\]/'
-}
-export PS1="\[${COLOR_GREEN}\]\u@\h:\w\$(get_git_branch) > \[${COLOR_NULL}\]"
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWSTASHSTATE=true
+GIT_PS1_SHOWUNTRACKEDFILES=true
+export PS1="\[${COLOR_GREEN}\]\u@\h:\w\$(__git_ps1 ' [%s]') > \[${COLOR_NULL}\]"
 
 
 #################
