@@ -47,7 +47,8 @@ Download and Install:
   - In Advanced Settings, change download location to Desktop
   - Ensure that LastPass preferences force logout after closing browser
     and idle time
-- Firefox
+- Firefox, Safari, Opera
+  - Get 1password extension for these, too
 - BetterTouchTool*
   - Enable window snapping in preferences
 - [f.lux](http://justgetflux.com)*
