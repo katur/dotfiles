@@ -193,6 +193,9 @@ let g:ctrlp_show_hidden = 1
 """""""""""
 " Airline "
 """""""""""
+" use patched font
+let g:airline_powerline_fonts = 1
+
 " show the status line, even when you only have one split open
 set laststatus=2
 
