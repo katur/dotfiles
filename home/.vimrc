@@ -54,9 +54,6 @@ set autoindent
 " Cause left/right movements at start/end of line to jump to previous/next line
 set whichwrap+=<,>,h,l,[,]
 
-" Use colors that look nice on dark background
-set background=dark
-
 " No beeping or flashing on errors
 set noerrorbells
 set novisualbell
@@ -97,6 +94,17 @@ set expandtab
 " Make backspace behave like most other apps
 set backspace=2
 set backspace=eol,start,indent
+
+
+""""""""""
+" Colors "
+""""""""""
+" Use colors that look nice on dark background
+set background=dark
+
+colorscheme torte
+
+let macvim_skip_colorscheme=1
 
 
 """"""""""""""""""
@@ -193,6 +201,7 @@ let g:ctrlp_show_hidden = 1
 """""""""""
 " Airline "
 """""""""""
+
 " use patched font
 let g:airline_powerline_fonts = 1
 
