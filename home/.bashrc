@@ -36,6 +36,10 @@ alias grep='grep --color=auto'
 # Prompt #
 ##########
 
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
@@ -52,10 +56,6 @@ bind 'set completion-ignore-case on'
 
 # Show ambiguities without ringing bell
 bind 'set show-all-if-ambiguous on'
-
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
-fi
 
 
 ##################
@@ -111,6 +111,13 @@ source /usr/local/bin/virtualenvwrapper.sh
 ########
 
 export PATH="~/bin:$PATH"
+
+
+############
+# Postgres #
+############
+
+export PATH="/usr/local/opt/postgresql@9.4/bin:$PATH"
 
 
 ########
