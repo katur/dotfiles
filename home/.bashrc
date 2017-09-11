@@ -98,9 +98,9 @@ alias profileme="history | tr -s ' ' | cut -d ' ' -f 3 | sort | uniq -c | sort -
 alias ducks='du -cks * | sort -rn | head -10'
 
 
-############################
-# Python virtualenvwrapper #
-############################
+##########
+# Python #
+##########
 
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
@@ -125,6 +125,14 @@ export PATH="/usr/local/opt/postgresql@9.4/bin:$PATH"
 ########
 
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+
+
+##############
+# Javascript #
+##############
+
+export NVM_DIR="/Users/katherine/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 
 ########
