@@ -11,6 +11,8 @@ These are the steps I did to set up the Mac I bought in 2015.
 - do encrypt the disk (i.e. FileVault on), allowing password recovery through
   iCloud password
 
+
+## Dock / Finder
 Remove most everything from the Dock, adding Terminal only.
 
 Show hidden files in Finder:
@@ -21,20 +23,19 @@ defaults write com.apple.finder AppleShowAllFiles YES
 Need to restart Finder to see this change (hold option while right-clicking
 Finder icon in the dock and click Relaunch)
 
+### Finder > Preferences
+
+- Change what shows up in Favorites sidebar to include home directory,
+  and change default to home directory
+- Show all filename extensions
+
 
 ## System Preferences
 
 - Dock: automatically hide / show
 - Date & Time > Clock: 24-hour clock, show day, show date
 - Desktop & Screensaver > Desktop: change it to something
-- iCloud: select only iCloud Drive and Photos
-
-
-## Finder > Preferences
-
-- Change what shows up in Favorites sidebar to include home directory,
-  and change default to home directory
-- Show all filename extensions
+- iCloud: select only iCloud Drive, Photos, and Find My Mac
 
 
 ## High-Level Applications
