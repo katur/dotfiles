@@ -8,7 +8,8 @@ These are the steps I did to set up the Mac I bought in 2015.
 - do not import any TimeMachine backup
 - do log into iCloud
 - do not set up iKeychain (will keep using Lastpass for now)
-- do encrypt the disk, allowing password recovery through iCloud password
+- do encrypt the disk (i.e. FileVault on), allowing password recovery through
+  iCloud password
 
 Remove most everything from the Dock, adding Terminal only.
 
