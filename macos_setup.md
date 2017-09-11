@@ -6,14 +6,26 @@ These are the steps I did to set up the Mac I bought in 2015.
 ## OS X Installation
 
 - do not import any TimeMachine backup
-- do log into iCloud
-- do not set up iKeychain (will keep using Lastpass for now)
-- do encrypt the disk (i.e. FileVault on), allowing password recovery through
-  iCloud password
+- do log into iCloud (can do this later from System Preferences)
+- do not set up iKeychain, since I use 1Password
+- do encrypt the disk (i.e. FileVault on), and allow password recovery through
+  iCloud password (can do this later from System Preferences)
 
 
-## Dock / Finder
-Remove most everything from the Dock, adding Terminal only.
+## System Preferences
+
+- Dock: automatically hide / show
+- Date & Time > Clock: 24-hour clock, show day, show date
+- Desktop & Screensaver > Desktop: change it to something
+- iCloud: select only iCloud Drive, Photos, and Find My Mac
+
+
+## Dock
+
+Remove most everything from the Dock.
+
+
+## Finder
 
 Show hidden files in Finder:
 ```
@@ -30,14 +42,6 @@ Finder icon in the dock and click Relaunch)
 - Show all filename extensions
 
 
-## System Preferences
-
-- Dock: automatically hide / show
-- Date & Time > Clock: 24-hour clock, show day, show date
-- Desktop & Screensaver > Desktop: change it to something
-- iCloud: select only iCloud Drive, Photos, and Find My Mac
-
-
 ## High-Level Applications
 
 Download and Install:
@@ -45,17 +49,19 @@ Download and Install:
 - Chrome
   - Make Chrome the default browser (in System Preferences)
   - Log in to Chrome to sync Chrome preferences and extensions
-  - Right click on uBlock and uSelect icons to "hide button"
+  - Right click on uBlock and uSelect (etc) icons to "Hide in Chrome Menu"
   - In Advanced Settings, change download location to Desktop
-  - Ensure that LastPass preferences force logout after closing browser
-    and idle time
+- 1Password
+  - Also install 1Password mini, and the Chrome extension
+- BetterTouchTool*
+  - Allow BTT to "control your computer" in System Preferences > Privacy
+  - Enable window snapping (BTT settings)
+  - Add license (TODO work)
+- [f.lux](https://justgetflux.com)*
+- AntiRSI* (TODO work)
+  - [Version 2.1 is free](http://antirsi.onnlucky.com)
 - Firefox, Safari, Opera
   - Get 1password extension for these, too
-- BetterTouchTool*
-  - Enable window snapping in preferences
-- [f.lux](http://justgetflux.com)*
-- AntiRSI*
-  - [Version 2.1 is free](http://antirsi.onnlucky.com)
 - Google Drive*
   - Log into Google account
 - Dropbox*
