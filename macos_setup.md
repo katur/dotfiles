@@ -116,7 +116,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 ## Git
 
 ```
-brew install git
+brew install git && brew install bash-completion
 ```
 
 Set bare bones global git configuration:
