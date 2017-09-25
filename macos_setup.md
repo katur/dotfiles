@@ -1,13 +1,10 @@
-# OS X Setup
+# macOS Setup
 
-These are the steps I did to set up the Mac I bought in 2015.
-
-
-## OS X Installation
+## macOS Installation
 
 - do not import any TimeMachine backup
 - do log into iCloud (can do this later from System Preferences)
-- do not set up iKeychain, since I use 1Password
+- do not set up iKeychain (prefer 1Password)
 - do encrypt the disk (i.e. FileVault on), and allow password recovery through
   iCloud password (can do this later from System Preferences)
 
@@ -35,6 +32,7 @@ defaults write com.apple.finder AppleShowAllFiles YES
 Need to restart Finder to see this change (hold option while right-clicking
 Finder icon in the dock and click Relaunch)
 
+
 ### Finder > Preferences
 
 - Change what shows up in Favorites sidebar to include home directory,
@@ -53,7 +51,7 @@ Download and Install:
   - In Advanced Settings, change download location to Desktop
 - 1Password
   - Also install 1Password mini and the Chrome extension
-- Slack, Screenhero, Skype
+- Slack, Screenhero*, Skype
 - BetterTouchTool*
   - Allow BTT to "control your computer" in System Preferences > Privacy
   - Enable window snapping (BTT settings)
@@ -64,10 +62,8 @@ Download and Install:
 - iTerm2
 - Other browsers: Firefox, Safari, Opera
   - Get 1password extension for these, too
-- Google Drive*
-  - Log into GDrive account
-- Dropbox*
-  - Log into Dropbox account
+- Google Drive* and Dropbox*
+  - Set up syncing
 - [SequelPro](https://www.sequelpro.com/)
   - Save connection info for various favorites
 - Various printer softwares (first time I hook up to printer)
