@@ -48,11 +48,12 @@ Download and Install:
 
 - Chrome
   - Make Chrome the default browser (in System Preferences)
-  - Log in to Chrome to sync Chrome preferences and extensions
+  - Log in to Chrome to sync preferences and extensions
   - Right click on uBlock and uSelect (etc) icons to "Hide in Chrome Menu"
   - In Advanced Settings, change download location to Desktop
 - 1Password
-  - Also install 1Password mini, and the Chrome extension
+  - Also install 1Password mini and the Chrome extension
+- Slack, Screenhero, Skype
 - BetterTouchTool*
   - Allow BTT to "control your computer" in System Preferences > Privacy
   - Enable window snapping (BTT settings)
@@ -60,17 +61,13 @@ Download and Install:
 - [f.lux](https://justgetflux.com)*
 - AntiRSI* (TODO work)
   - [Version 2.1 is free](http://antirsi.onnlucky.com)
-- Firefox, Safari, Opera
+- iTerm2
+- Other browsers: Firefox, Safari, Opera
   - Get 1password extension for these, too
 - Google Drive*
-  - Log into Google account
+  - Log into GDrive account
 - Dropbox*
   - Log into Dropbox account
-- Skype
-  - Log into Skype account
-- [Cisco AnyConnect](https://nyu.service-now.com/servicelink/kb_search.do?id-KB0011175),
-  for VPN access to NYU network
-- TextWrangler
 - [SequelPro](https://www.sequelpro.com/)
   - Save connection info for various favorites
 - Various printer softwares (first time I hook up to printer)
