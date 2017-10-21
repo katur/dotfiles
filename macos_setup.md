@@ -119,6 +119,17 @@ Install Homebrew for OS X package management:
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
+### Notes
+After El Capitan update, I was able to restore my ownership of /usr/local:
+```
+sudo chown $(whoami):admin /usr/local && sudo chown -R $(whoami):admin /usr/local
+```
+
+But now in High Sierra, this is no longer permitted.
+So when I've needed new subdirectories within /usr/local (e.g.
+/usr/local/include, /usr/local/Frameworks), I've just done a sudo mkdir
+followed by a sudo chown $(whoami):admin.
+
 
 ## Git
 
@@ -276,62 +287,27 @@ Not much should be needed, but make sure to remove any already-present
 
 ## Python
 
-[Here](https://github.com/Homebrew/brew/blob/master/docs/Homebrew-and-Python.md)
+[Here](https://docs.brew.sh/Homebrew-and-Python.html)
 is the Homebrew documentation about brewing Python.
 ```
-brew install python
-brew install python3
-pip install --upgrade pip setuptools
-pip3 install --upgrade pip setuptools
+brew install python2
+pip2 install --upgrade pip setuptools
+pip2 install --upgrade pip
 ```
-
-*NOTE:*
-When I originally installed and upgraded python3, I ran into
-this issue.
-
-However, the --upgrade command overwrites the default pip and easy_install
-such that they use python3 instead of python2, despite the fact that
-these files exist in python2 directories.
-[This is a known issue.](https://github.com/Homebrew/homebrew/issues/25752)
-So, since I do not need Python 3 right now anyway, I uninstalled the brewed
-Pythons and packages, and started over, brewing only python2.
-
-*ENDNOTE*
-
 
 Install virtualenv and virtualenvwrapper for creating isolated Python
 package environments, and flake8 for syntax and style checking (which I
 do in vim with Syntastic):
 ```
-pip install virtualenv
-pip install virtualenvwrapper
-pip install flake8
+pip2 install virtualenv
+pip2 install virtualenvwrapper
+pip2 install flake8
 ```
-
-*NOTE:*
-I also did these with pip3, though shouldn't have, because in doing so,
-the virtualenv and virtualenvwrapper shell scripts (in /usr/local/bin)
-were overwritten to be python3, not python2. This might be related to the
-previous issue mentioned (or not?).
-```
-pip3 install virtualenv
-pip3 install virtualenvwrapper
-pip3 install flake8
-```
-
-To fix:
-```
-pip install --upgrade virtualenv
-pip install --upgrade virtualenvwrapper
-rm /usr/local/bin/virtualenv-clone
-```
-
-*ENDNOTE*
-
 
 Confirm virtualenvwrapper config is in `~/.bashrc`:
 ```
 export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
@@ -402,30 +378,20 @@ gpg --list-keys
 This creates dir ~/.gnupg, file ~/.gnupg/gpg.conf, file ~/.gnupg/pubring.gpg,
 and file ~/.gnupg/trustdb.gpg
 
-TODO: I still need to set up my gpg keys. Research whether this should
-relate to ssh keys. Also might want to get the keys off my old laptop,
-since I may have registered these in places.
+TODO: figure out how to organize keys between gpg and keybase. Also, this
+has to happen before RVM install.
 
 
 ## Miscellaneous command line packages
 ```
 brew install pv
 brew install tree
-brew install bash-completion
 ```
 
 
 ## Heroku
 Download and install
 [Heroku Toolbelt for OS X](https://toolbelt.heroku.com/).
-
-
-## After El Capitan update
-
-Restore my ownership of /usr/local
-```
-sudo chown $(whoami):admin /usr/local && sudo chown -R $(whoami):admin /usr/local
-```
 
 
 ## Jekyll
@@ -485,17 +451,6 @@ if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 Then I added the newly installed java:
 ```
 jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/
-```
-
-
-## Relevant
-
-- [PSequel](http://www.psequel.com/)
-
-```
-brew install postgres
-brew services start postgresql
-brew services stop postgresql
 ```
 
 

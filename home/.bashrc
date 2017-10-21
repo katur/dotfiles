@@ -103,6 +103,7 @@ alias ducks='du -cks * | sort -rn | head -10'
 ##########
 
 export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2
 source /usr/local/bin/virtualenvwrapper.sh
 
 
