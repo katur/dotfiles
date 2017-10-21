@@ -51,57 +51,64 @@ Download and Install:
   - In Advanced Settings, change download location to Desktop
 - 1Password
   - Also install 1Password mini and the Chrome extension
-- Slack, Screenhero*, Skype
-- BetterTouchTool*
+- BetterTouchTool\*
   - Allow BTT to "control your computer" in System Preferences > Privacy
   - Enable window snapping (BTT settings)
   - Add license (TODO work)
-- [f.lux](https://justgetflux.com)*
-- AntiRSI* (TODO work)
-  - [Version 2.1 is free](http://antirsi.onnlucky.com)
+- [f.lux](https://justgetflux.com)\*
 - iTerm2
-- Other browsers: Firefox, Safari, Opera
-  - Get 1password extension for these, too
-- Google Drive* and Dropbox*
+- AntiRSI\* (TODO work)
+  - [Version 2.1 is free](http://antirsi.onnlucky.com)
+- Communication: Slack, Screenhero\*, Keybase\*, Skype
+- Other browsers: Firefox, Safari, Opera (including 1pass extensions)
+- File sharing: Google Drive\* and Dropbox\*
   - Set up syncing
 - [SequelPro](https://www.sequelpro.com/)
   - Save connection info for various favorites
 - Various printer softwares (first time I hook up to printer)
-- Caffeine
-  - NOTE: installing from the App Store failed with a mysterious error
-    message; perhaps not ready for el capitan. So, do
-    [direct download](http://lightheadsw.com/caffeine/) instead.
 - Adobe Reader
+- KeepingYouAwake\*
+  - `brew cask install keepingyouawake`
 
-*These apps should start on system login, which can be set at
+\* These apps should start on system login, which can be set at
 System Preferences > Users & Groups > Login Items
 
 
-## Terminal Preferences / OS X Command Line Tools
+## Terminal Preferences
 
 Edit Terminal preferences for black background, 13pt font, rows and
 cols to fill screen, no Audible bell, and unqualified Visual bell.
-
-Download and install OS X Command Line Tools (to get here, follow
-instructions on prompt that appears during git init attempt)
-
-NOTE: after macOS Sierra upgrade, git was broken. do this to re-install macOS
-Command Line Tools:
-```
-xcode-select --install
-```
 
 Download a vim-powerline-patched (-glyphed) font, and install it by copying
 it into Font Book app. Once installed, change Terminal preferences
 to use the font. I got: Droid Sans Mono for Powerline Regular.
 
+TODO: change this section to be about importing iTerm preferences
+
+
+## Command Line Tools
+
+Install macOS Command Line Tools:
+```
+xcode-select --install
+```
+
 
 ## SSH
 
+### If creating a new keypair:
 Create SSH keys (no passphrase for now; to add later,
 [see this](http://www.cyberciti.biz/faq/howto-ssh-changing-passphrase/)):
 ```
 ssh-keygen -t rsa -b 4096 -C "my_email@lemonparty.org"
+```
+
+### If copying from another device:
+Create ~/.ssh directory if it is not already there. Turn on Remote Login on
+the other device, and copy the keypair:
+```
+rsync -avz <user>@<ip>:~/.ssh/id_rsa.pub .
+rsync -avz <user>@<ip>:~/.ssh/id_rsa .
 ```
 
 
@@ -119,7 +126,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew install git && brew install bash-completion
 ```
 
-Set bare bones global git configuration:
+First time config setup (note: this configuration is now in dotfiles repo):
 ```
 git config --global user.name "My Name"
 git config --global user.email "my_email@lemonparty.org"
