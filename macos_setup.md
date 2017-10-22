@@ -49,7 +49,7 @@ Finder icon in the dock and click Relaunch)
   - In Advanced Settings, change download location to Desktop
 - 1Password
   - Also install 1Password mini and the Chrome extension
-- Other browsers: Firefox, Safari, Opera (including 1pass extensions)
+- Other browsers: Firefox, Safari, Opera (including 1Password extensions)
 
 ### Communication and file sharing (log in to account / teams)
 - [Google Drive - Backup and Sync](https://www.google.com/drive/download/)\*
