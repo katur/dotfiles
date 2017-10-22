@@ -74,6 +74,7 @@ Finder icon in the dock and click Relaunch)
   - Save connection info for various favorites
 - [Sketch](https://www.sketchapp.com/)
 - [Skitch](https://evernote.com/products/skitch)
+  - Check options to start Skitch helper at login, and leave it running
 
 ### Pleasant things
 - [BetterTouchTool](https://www.boastr.net/)\*
