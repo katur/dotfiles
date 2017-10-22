@@ -13,7 +13,7 @@
 
 - Dock: automatically hide / show
 - Date & Time > Clock: 24-hour clock, show day, show date
-- Desktop & Screensaver > Desktop: change it to something
+- Desktop & Screensaver > change Desktop to a Muxy photo
 - iCloud: select only iCloud Drive, Photos, and Find My Mac
 
 
