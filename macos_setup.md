@@ -52,19 +52,19 @@ Finder icon in the dock and click Relaunch)
 - Other browsers: Firefox, Safari, Opera (including 1pass extensions)
 
 ### Communication and file sharing (log in to account / teams)
-- Google Drive\*
+- [Google Drive - Backup and Sync](https://www.google.com/drive/download/)\*
   - Set up syncing
-- Dropbox\*
+- [Dropbox](https://www.dropbox.com)\*
   - Set up syncing
-- Keybase\*
-- Slack
-- Screenhero\*
-- Skype
+- [Keybase](https://keybase.io/)\*
+- [Slack](https://slack.com/)
+- [Screenhero](https://screenhero.com/)\*
+- [Skype](https://www.skype.com/en/)
 
 ### Programming
-- iTerm2
+- [iTerm2](https://www.iterm2.com/)
   - Import preferences
-- Sublime
+- [Sublime 3](https://www.sublimetext.com/)
   - Enable `subl` command line tool:
     `ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl`
   - Import preferences
@@ -72,14 +72,16 @@ Finder icon in the dock and click Relaunch)
   - Save connection info for various favorites
 - [Postico](https://eggerapps.at/postico/)
   - Save connection info for various favorites
+- [Sketch](https://www.sketchapp.com/)
+- [Skitch](https://evernote.com/products/skitch)
 
 ### Pleasant things
-- BetterTouchTool\*
+- [BetterTouchTool](https://www.boastr.net/)\*
   - Allow BTT to "control your computer" in System Preferences > Privacy
   - Enable window snapping (BTT settings)
   - Add license
 - [f.lux](https://justgetflux.com)\*
-- KeepingYouAwake\*
+- [KeepingYouAwake](https://github.com/newmarcel/KeepingYouAwake)\*
   - `brew cask install keepingyouawake`
 - AntiRSI\*
   - [Version 2.1 is free](http://antirsi.onnlucky.com)
