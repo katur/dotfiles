@@ -85,7 +85,8 @@ Finder icon in the dock and click Relaunch)
 - [KeepingYouAwake](https://github.com/newmarcel/KeepingYouAwake)\*
   - `brew cask install keepingyouawake`
 - AntiRSI\*
-  - [Version 2.1 is free](http://antirsi.onnlucky.com)
+  - Version 2.1 had been available for free [here](http://antirsi.onnlucky.com),
+    but that webpage is no longer loading.
 
 \* These apps should start on system login, which can be set at
 System Preferences > Users & Groups > Login Items
