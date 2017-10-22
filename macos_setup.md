@@ -54,7 +54,7 @@ Finder icon in the dock and click Relaunch)
 ### Communication and file sharing (log in to account / teams)
 - [Google Drive - Backup and Sync](https://www.google.com/drive/download/)\*
   - Set up syncing
-- [Dropbox](https://www.dropbox.com)\*
+- [Dropbox](https://www.dropbox.com/install)\*
   - Set up syncing
 - [Keybase](https://keybase.io/)\*
 - [Slack](https://slack.com/)
