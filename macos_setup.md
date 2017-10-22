@@ -34,7 +34,6 @@ Finder icon in the dock and click Relaunch)
 
 
 ### Finder > Preferences
-
 - Change what shows up in Favorites sidebar to include home directory,
   and change default to home directory
 - Show all filename extensions
@@ -42,8 +41,7 @@ Finder icon in the dock and click Relaunch)
 
 ## High-Level Applications
 
-Download and Install:
-
+### General
 - Chrome
   - Make Chrome the default browser (in System Preferences)
   - Log in to Chrome to sync preferences and extensions
@@ -51,24 +49,40 @@ Download and Install:
   - In Advanced Settings, change download location to Desktop
 - 1Password
   - Also install 1Password mini and the Chrome extension
+- Other browsers: Firefox, Safari, Opera (including 1pass extensions)
+
+### Communication and file sharing (log in to account / teams)
+- Google Drive\*
+  - Set up syncing
+- Dropbox\*
+  - Set up syncing
+- Keybase\*
+- Slack
+- Screenhero\*
+- Skype
+
+### Programming
+- iTerm2
+  - Import preferences
+- Sublime
+  - Enable `subl` command line tool:
+    `ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl`
+  - Import preferences
+- [SequelPro](https://www.sequelpro.com/)
+  - Save connection info for various favorites
+- [Postico](https://eggerapps.at/postico/)
+  - Save connection info for various favorites
+
+### Pleasant things
 - BetterTouchTool\*
   - Allow BTT to "control your computer" in System Preferences > Privacy
   - Enable window snapping (BTT settings)
-  - Add license (TODO work)
+  - Add license
 - [f.lux](https://justgetflux.com)\*
-- iTerm2
-- AntiRSI\* (TODO work)
-  - [Version 2.1 is free](http://antirsi.onnlucky.com)
-- Communication: Slack, Screenhero\*, Keybase\*, Skype
-- Other browsers: Firefox, Safari, Opera (including 1pass extensions)
-- File sharing: Google Drive\* and Dropbox\*
-  - Set up syncing
-- [SequelPro](https://www.sequelpro.com/)
-  - Save connection info for various favorites
-- Various printer softwares (first time I hook up to printer)
-- Adobe Reader
 - KeepingYouAwake\*
   - `brew cask install keepingyouawake`
+- AntiRSI\*
+  - [Version 2.1 is free](http://antirsi.onnlucky.com)
 
 \* These apps should start on system login, which can be set at
 System Preferences > Users & Groups > Login Items
@@ -83,7 +97,7 @@ Download a vim-powerline-patched (-glyphed) font, and install it by copying
 it into Font Book app. Once installed, change Terminal preferences
 to use the font. I got: Droid Sans Mono for Powerline Regular.
 
-TODO: change this section to be about importing iTerm preferences
+TODO: deprecate this section in favor of iTerm
 
 
 ## Command Line Tools
@@ -96,14 +110,14 @@ xcode-select --install
 
 ## SSH
 
-### If creating a new keypair:
+### *If creating a new keypair*
 Create SSH keys (no passphrase for now; to add later,
 [see this](http://www.cyberciti.biz/faq/howto-ssh-changing-passphrase/)):
 ```
 ssh-keygen -t rsa -b 4096 -C "my_email@lemonparty.org"
 ```
 
-### If copying from another device:
+### *If copying from another device*
 Create ~/.ssh directory if it is not already there. Turn on Remote Login on
 the other device, and copy the keypair:
 ```
@@ -119,41 +133,78 @@ Install Homebrew for OS X package management:
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-### Notes
-After El Capitan update, I was able to restore my ownership of /usr/local:
+*NOTE:* After El Capitan update, I could restore my ownership of /usr/local:
 ```
 sudo chown $(whoami):admin /usr/local && sudo chown -R $(whoami):admin /usr/local
 ```
 
 But now in High Sierra, this is no longer permitted.
-So when I've needed new subdirectories within /usr/local (e.g.
+So when I need new subdirectories within /usr/local (e.g.
 /usr/local/include, /usr/local/Frameworks), I've just done a sudo mkdir
 followed by a sudo chown $(whoami):admin.
 
 
+## GPG
+
+```
+brew install gpg
+gpg --list-keys
+```
+This creates dir ~/.gnupg, file ~/.gnupg/gpg.conf, file ~/.gnupg/pubring.gpg,
+and file ~/.gnupg/trustdb.gpg
+
+TODO: figure out how to organize keys between gpg and keybase.
+
+
+## Miscellaneous command line tools
+
+```
+brew install pv
+brew install tree
+```
+
+
 ## Git
+
+Add SSH public key to SSH Keys in my GitHub personal settings.
 
 ```
 brew install git && brew install bash-completion
 ```
 
-First time config setup (note: this configuration is now in dotfiles repo):
+### *First time config setup (if not in homesick repo)*
 ```
 git config --global user.name "My Name"
 git config --global user.email "my_email@lemonparty.org"
 git config --global push.default simple
 ```
 
-Add SSH public key to SSH Keys in my GitHub personal settings.
 
-
-## Dot Files
+## Dotfiles
 
 ```
 sudo gem install homesick
 ```
 
-### *If setting up homesick for the first time*
+### *If already have a homesick repo*
+
+Clone the repo:
+```
+homesick clone katur/dotfiles
+```
+
+Edit `~/.homesick/repos/dotfiles/.git/config` to use the SSH URL instead of
+the HTTP URL for connecting (can find this URL in the repo on GitHub).
+
+Before creating symlinks, remove any dotfiles that will cause conflicts
+(e.g. ~/.gitconfig, ~/.bash_profile, ~/.bashrc, etc)
+
+Create the symlinks:
+```
+homesick symlink dotfiles
+```
+
+### *First time homesick setup*
 
 Create repo in GitHub called `dotfiles`.
 
@@ -170,37 +221,18 @@ Create directory to hold the files that will be symlinked into `~`:
 mkdir ~/.homesick/repos/dotfiles/home
 ```
 
-Add/move `.bash_profile` and `.bashrc` files (or whatever shell configuration
-files you want) to `~/.homesick/repos/dotfiles/home`. Commit and push
-changes. Then, to create the symlinks into `~`:
+First, let's take care of our bash and git configs. Add/move `~/.bash_profile`,
+`~/.bashrc`, `~/.gitconfig`, etc (whatever configuration files you want) to
+`~/.homesick/repos/dotfiles/home`. Commit and push changes. Then, create the
+symlinks into `~`:
 ```
 homesick symlink dotfiles
 ```
 
 The bash settings should now work properly (if not, try restarting Terminal).
 
-Move the global git config file to the repo, too:
-```
-mv ~/.gitconfig ~/.homesick/repos/dotfiles/home/
-homesick symlink dotfiles
-```
+Next, let's take care of our vim config.
 
-### *If already have a homesick repo*
-
-Follow same steps to clone the repo and to use SSH instead of HTTP.
-
-Before creating symlinks, might have to remove certain dotfiles that
-might already exist (e.g. ~/.gitconfig, ~/.bash_profile, ~/.bashrc, etc)
-
-Now create the symlinks:
-```
-homesick symlink dotfiles
-```
-
-
-## Vim
-
-### *If setting up homesick for the first time*
 To prevent committing temporary vim files and logs, make sure these
 are present in `~/.homesick/repos/dotfiles/.gitignore`:
 ```
@@ -216,8 +248,11 @@ homesick symlink dotfiles
 ```
 
 
-#### Language-specific vim rules
+## Vim
 
+### *First time vim config setup (if not in homesick repo)*
+
+#### Language-specific vim rules
 Create ftplugin directory for language-specific vim rules:
 ```
 mkdir ~/.homesick/repos/dotfiles/home/.vim/ftplugin
@@ -231,9 +266,7 @@ setlocal softtabstop=4
 setlocal shiftwidth=4
 ```
 
-
 #### Vim package management with Pathogen
-
 Install pathogen as a git submodule in the dotfiles repo
 (see
 [this tutorial](http://www.tedreed.info/setup/2012/03/30/pathogen-and-plugins/)
@@ -262,7 +295,6 @@ call pathogen#infect()
 
 
 #### Vim packages
-
 Install packages as git submodules in the dotfiles repo:
 ```
 cd ~/.homesick/repos/dotfiles
@@ -277,12 +309,6 @@ git submodule add https://github.com/scrooloose/nerdtree home/.vim/bundle/nerdtr
 To configure Syntastic, add the
 [recommended syntastic settings](https://github.com/scrooloose/syntastic#3-recommended-settings)
 to .vimrc.
-
-
-### *If already have a homesick repo
-
-Not much should be needed, but make sure to remove any already-present
-`~/.vim` or `~/.vimrc` prior to making the symlinks.
 
 
 ## Python
@@ -310,6 +336,11 @@ export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2
 source /usr/local/bin/virtualenvwrapper.sh
 ```
+
+
+## Ruby
+
+See RMA README.
 
 
 ## MySQL
@@ -345,7 +376,12 @@ mysql> GRANT ALL PRIVILEGES ON *.* TO 'dev'@'localhost';
 ```
 
 
-## Web Dev Stuff (sass, coffee, etc)
+## Postgres
+
+See RMA README.
+
+
+## Front-end Web Dev
 
 ```
 sudo gem install sass
@@ -355,6 +391,19 @@ sudo npm install -g gulp
 ```
 
 Note: there is a bug in coffee-script@1.9.1
+
+
+## Jekyll
+
+```
+sudo gem install jekyll
+```
+
+
+## Heroku
+
+Download and install
+[Heroku Toolbelt for OS X](https://toolbelt.heroku.com/).
 
 
 ## LaTeX
@@ -368,36 +417,6 @@ the GUIs and some other stuff.
 Download and install the latest release of
 [TeX Live Utility app](http://amaxwell.github.io/tlutility/),
 for package management. Use this to require needed packages (e.g. enumitem).
-
-
-# GPG
-```
-brew install gpg
-gpg --list-keys
-```
-This creates dir ~/.gnupg, file ~/.gnupg/gpg.conf, file ~/.gnupg/pubring.gpg,
-and file ~/.gnupg/trustdb.gpg
-
-TODO: figure out how to organize keys between gpg and keybase. Also, this
-has to happen before RVM install.
-
-
-## Miscellaneous command line packages
-```
-brew install pv
-brew install tree
-```
-
-
-## Heroku
-Download and install
-[Heroku Toolbelt for OS X](https://toolbelt.heroku.com/).
-
-
-## Jekyll
-```
-sudo gem install jekyll
-```
 
 
 ## Java
