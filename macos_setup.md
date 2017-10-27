@@ -59,7 +59,6 @@ Finder icon in the dock and click Relaunch)
   - Set up syncing
 - [Keybase](https://keybase.io/)\*
 - [Slack](https://slack.com/)
-- [Screenhero](https://screenhero.com/)\*
 - [Skype](https://www.skype.com/en/)
 
 ### Programming
