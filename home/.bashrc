@@ -43,7 +43,7 @@ fi
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
-export PS1="\[${COLOR_GREEN}\]\u@\h:\w\$(__git_ps1 ' [%s]') > \[${COLOR_NULL}\]"
+export PS1="\[${COLOR_GREEN}\]\w\$(__git_ps1 ' [%s]') > \[${COLOR_NULL}\]"
 
 
 #################
